@@ -23,7 +23,7 @@ const App = () => {
     };
 
     return (
-      <div className="main-container">
+      <div>
         <Plane className="airplane-svg" /> {/* Apply the CSS class here */}
         <div className="search-container">
             <h1>ExploreMore Travel</h1>
