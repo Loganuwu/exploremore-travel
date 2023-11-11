@@ -62,7 +62,6 @@ body {
   background-color: #ffffff; /* Background color for the app */
   font-family: 'Poppins', sans-serif;
   font-weight: 700;
-  size: 40px;
 
 }
 
@@ -98,9 +97,10 @@ h1 {
   padding: 20px;   /* Add padding */
   border: 1px solid #ccc; /* Simple border */
   border-radius: 10px; /* Rounded corners */
-  background-color: #f9f9f9; /* Light background */
   text-align: center; /* Center the content */
   box-shadow: 0 20px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  background-color: #FFBF69;
+
 }
 
 .search-container h1 {
@@ -113,4 +113,9 @@ h1 {
   margin: 5px; /* Spacing around inputs and buttons */
   padding: 10px; /* Padding inside inputs and buttons */
   /* Additional styles for inputs and buttons */
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  color: black;
+  background-color: #FF9F1C;
+  size: 30px;
 }
