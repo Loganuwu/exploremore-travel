@@ -36,3 +36,81 @@
     transform: rotate(360deg);
   }
 }
+
+/* Style for the body to remove default margin and set the font */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif; /* Example font */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Viewport height */
+  background-color: #FFBF69; /* Example background color */
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+}
+
+/* Style for the main container */
+.main-container {
+  position: relative;
+  width: 80%; /* Or any width you prefer */
+  max-width: 1200px; /* Maximum width */
+  margin: auto; /* Center horizontally */
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Example shadow for elevation */
+  background-color: #ffffff; /* Background color for the app */
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  size: 40px;
+
+}
+
+@media (max-width: 600px) {
+  .main-container {
+      width: 95%; /* Increase width on smaller screens */
+      padding: 10px; /* Reduce padding on smaller screens */
+  }
+  .search-container {
+    padding: 10px;
+    margin: 10px 0;
+}
+}
+
+h1 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 200;
+}
+
+.airplane-svg {
+  position: absolute; /* Position it independently of other elements */
+  width: 1400px; /* Adjust the size as needed */
+  opacity: 1; /* Adjust transparency */
+  top: 30%; /* Center vertically */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Adjust for accurate centering */
+  z-index: -1; /* Place it behind other content */
+}
+
+.search-container {
+  /* Styles for the container */
+  margin: 20px 0;  /* Adjust spacing as needed */
+  padding: 20px;   /* Add padding */
+  border: 1px solid #ccc; /* Simple border */
+  border-radius: 10px; /* Rounded corners */
+  background-color: #f9f9f9; /* Light background */
+  text-align: center; /* Center the content */
+  box-shadow: 0 20px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.search-container h1 {
+  margin-bottom: 20px; /* Space below the title */
+  /* Additional styles for the title */
+}
+
+.search-container input,
+.search-container button {
+  margin: 5px; /* Spacing around inputs and buttons */
+  padding: 10px; /* Padding inside inputs and buttons */
+  /* Additional styles for inputs and buttons */
+}
