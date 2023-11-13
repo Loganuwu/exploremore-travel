@@ -127,3 +127,30 @@ h1 {
   font-family: 'Poppins', sans-serif;
   color: #2193b0;
 }
+
+/* FlightSearch CSS -------------------------------------------------------------------------------------- */
+
+.date-picker-container {
+  margin: 20px 0; /* Space above and below the container */
+  padding: 10px; /* Padding inside the container */
+  border: 1px solid #ccc; /* Border around the container */
+  border-radius: 10px; /* Rounded corners */
+  background-color: #f9f9f9; /* Light background color */
+  text-align: center; /* Center the contents */
+}
+
+.date-picker-container label {
+  display: block; /* Make the label take up the full width */
+  margin-bottom: 10px; /* Space below the label */
+}
+
+.input-field {
+  margin-bottom: 15px;
+}
+
+.input-field input, .input-field .date-input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
