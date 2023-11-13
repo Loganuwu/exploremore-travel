@@ -76,6 +76,12 @@ body {
     padding: 10px;
     margin: 10px 0;
 }
+.flight-search-form {
+  flex-direction: column;
+}
+.input-column {
+  margin: 10px 0; /* Adjust margin for vertical layout */
+}
 }
 
 h1 {
@@ -153,4 +159,22 @@ h1 {
   padding: 8px;
   border: 1px solid #ccc;
   border-radius: 4px;
+}
+
+.flight-search-form {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.input-column {
+  flex: 1; /* Each column takes equal width */
+  margin: 0 10px; /* Spacing between columns */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* This centers the button vertically */
+}
+
+.input-column button {
+  align-self: center; /* Align the button in the center of its container */
 }

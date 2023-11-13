@@ -55,31 +55,31 @@ const FlightSearch = ({ onSearch }) => {
     
 
     return (
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} className='flight-search-form'>
             {/* From and To input fields */}
-            <div className="input-field">
-                <label htmlFor="from">From:</label>
+            <div className="input-column">
+                <label htmlFor="from">From</label>
                 <input 
                     type="text" 
                     id="from"
                     value={from}
                     onChange={(e) => setFrom(e.target.value)}
-                    placeholder="Enter departure city/airport" 
+                    placeholder="Enter departure city" 
                 />
             </div>
-            <div className="input-field">
-                <label htmlFor="to">To:</label>
+            <div className="input-column">
+                <label htmlFor="to">To</label>
                 <input 
                     type="text" 
                     id="to"
                     value={to}
                     onChange={(e) => setTo(e.target.value)}
-                    placeholder="Enter destination city/airport" 
+                    placeholder="Enter destination city" 
                 />
             </div>
             {/* DATE PICKER HERE -----------------------------------------------  */}
-            <div className="input-field">
-                <label htmlFor="date-picker">Dates:</label>
+            <div className="input-column">
+                <label htmlFor="date-picker">Dates</label>
                 <DatePicker
                     selected={startDate}
                     onChange={(dates) => {
@@ -97,7 +97,11 @@ const FlightSearch = ({ onSearch }) => {
                     open={isDatePickerVisible}
                 />
             </div>
-            <button type="submit">Search Flights</button>
+            <div className="input-column">
+                <label style={{ visibility: 'hidden' }}>Search:</label> {/* Invisible label */}
+                <button type="submit">Search Flights</button>
+            </div>
+
         </form>
     );
 };
