@@ -1,31 +1,23 @@
 import React, { useState } from 'react';
+import DatePicker from 'react-datepicker';
+import 'react-datepicker/dist/react-datepicker.css';
 
 const FlightSearch = ({ onSearch }) => {
     const [from, setFrom] = useState('');
     const [to, setTo] = useState('');
+    const [startDate, setStartDate] = useState(new Date());
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        onSearch({ from, to });
+        onSearch({ from, to, date: startDate });
     };
 
     return (
         <form onSubmit={handleSubmit}>
-            <input 
-                type="text" 
-                placeholder="From" 
-                value={from} 
-                onChange={e => setFrom(e.target.value)} 
-            />
-            <input 
-                type="text" 
-                placeholder="To" 
-                value={to} 
-                onChange={e => setTo(e.target.value)} 
-            />
+            {/* From and To input fields */}
+            <DatePicker selected={startDate} onChange={(date) => setStartDate(date)} />
             <button type="submit">Search Flights</button>
         </form>
     );
 };
-
 export default FlightSearch;
