@@ -178,3 +178,41 @@ h1 {
 .input-column button {
   align-self: center; /* Align the button in the center of its container */
 }
+
+.search-toggle {
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* Adds space between the buttons */
+}
+
+.search-toggle button {
+  padding: 10px;
+  border: none; /* Removes the border */
+  background-color: transparent; /* Makes the background transparent */
+  cursor: pointer;
+  font-size: 16px; /* Adjust font size as needed */
+  transition: color 0.3s; /* Smooth transition for color */
+  position: relative; /* For positioning the line */
+}
+
+.search-toggle button:hover {
+  color: #007bff; /* Color change on hover, adjust as needed */
+}
+
+.search-toggle button.active {
+  color: #007bff; /* Active state text color */
+}
+
+.search-toggle button.active:after {
+  content: '';
+  position: absolute;
+  bottom: -10px; /* Adjust as needed */
+  left: 0;
+  right: 0;
+  height: 2px; /* Thickness of the line */
+  background-color: #007bff; /* Line color */
+  margin: 0 auto;
+  width: 50%; /* Adjust the width of the line as needed */
+}
+
+
