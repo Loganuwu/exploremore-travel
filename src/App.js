@@ -30,26 +30,28 @@ const App = () => {
     return (
       <div>
         <Plane className="airplane-svg" />
-        <div className="search-toggle">
-            <button onClick={() => setSearchMode('flights')} 
-                    className={searchMode === 'flights' ? 'active' : ''}>
-                Flights
-            </button>
-            <button onClick={() => setSearchMode('stays')} 
-                    className={searchMode === 'stays' ? 'active' : ''}>
-                Stays
-            </button>
+        <div className="search-container">
+            {/* Toggle buttons */}
+            <div className="search-toggle">
+                <button onClick={() => setSearchMode('flights')} 
+                        className={searchMode === 'flights' ? 'active' : ''}>
+                    Flights
+                </button>
+                <button onClick={() => setSearchMode('stays')} 
+                        className={searchMode === 'stays' ? 'active' : ''}>
+                    Stays
+                </button>
+            </div>
+
+            {/* Header */}
+            <h1>ExploreMore Travel</h1>
+
+            {/* Other components */}
+            <DestinationList destinations={destinations} />
+            <FlightSearch onSearch={handleFlightSearch} searchMode={searchMode} />
+            {/* ... rest of your code */}
         </div>
 
-        <div className="search-container">
-            <h1>ExploreMore Travel</h1>
-            <DestinationList destinations={destinations} />
-            <FlightSearch 
-                onSearch={handleFlightSearch} 
-                searchMode={searchMode} // Pass the search mode as a prop
-            />
-            {/* Render flights or stays results here based on searchMode */}
-        </div>
       </div>
     );
 };
