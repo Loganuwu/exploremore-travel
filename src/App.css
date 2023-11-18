@@ -233,3 +233,27 @@ h1 {
   width: 70%; /* Full width of the line */
 }
 
+/* StaysSearch CSS -------------------------------------------------------------------------------------- */
+
+.stay-search-form {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.stay-search-form .input-column {
+  flex: 1;
+  margin: 0 10px; /* Adjust margins as needed */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Ensure input fields and button match in style */
+.stay-search-form input,
+.stay-search-form button {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  /* ... other styles ... */
+}

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 
-const FlightSearch = ({ onSearch }) => {
+const FlightSearch = ({ onSearch, searchMode }) => {
     const [from, setFrom] = useState('');
     const [to, setTo] = useState('');
     const [startDate, setStartDate] = useState(new Date());
