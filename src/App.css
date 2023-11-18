@@ -250,7 +250,7 @@ h1 {
   height: 2px;
   background-color: #007bff; /* Or any other color for the underline */
   margin: 0 auto;
-  width: 70%; /* Full width for the line */
+  width: 80%; /* Full width for the line */
 }
 
 .search-toggle button:not(.active):hover::after {
@@ -262,7 +262,7 @@ h1 {
   height: 2px;
   background-color: black; /* Hovered button underline color */
   margin: 0 auto;
-  width: 70%; /* Full width of the line */
+  width: 80%; /* Full width of the line */
 }
 
 /* StaysSearch CSS -------------------------------------------------------------------------------------- */
@@ -288,4 +288,17 @@ h1 {
   border: 1px solid #ccc;
   border-radius: 4px;
   /* ... other styles ... */
+}
+
+
+/* HotelSearch CSS -------------------------------------------------------------------------------------- */
+.hotel-list {
+  margin-top: 20px;
+}
+
+.hotel-item {
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
 }
