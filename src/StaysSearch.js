@@ -35,11 +35,11 @@ const StaysSearch = ({ onSearch }) => {
 
         try {
             const response = await axios.request(options);
-            if (response.data && Array.isArray(response.data.result)) {
-                setHotels(response.data.result); // Access the nested array of hotels
+            if (response.data && response.data.data && Array.isArray(response.data.data.result)) {
+                setHotels(response.data.data.result); // Access the nested array of hotels
             } else {
                 console.log('Response data is not in the expected format:', response.data);
-                setHotels([]); // Set an empty array if response is not as expected
+                setHotels([]); // Set to an empty array if the response structure is not as expected
             }
         } catch (error) {
             console.error(error);
@@ -110,9 +110,11 @@ const StaysSearch = ({ onSearch }) => {
                     <div key={index} className="hotel-item">
                         <h3>{hotel.hotel_name}</h3>
                         <img src={hotel.main_photo_url} alt={hotel.hotel_name} />
+                        {/* Add other hotel details you want to display */}
                     </div>
                 ))}
             </div>
+
         </>
     );
 };
