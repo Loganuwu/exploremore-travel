@@ -112,11 +112,11 @@ h1 {
   font-size: 30px;
   font-weight: 700;
   background-image: linear-gradient(to right, #6dd5ed, #2193b0); /* Example gradient colors */
-
 }
 
 .search-container h1 {
   margin-bottom: 20px; /* Space below the title */
+  margin-top: 10px;
   /* Additional styles for the title */
 }
 
@@ -182,7 +182,8 @@ h1 {
 .search-toggle {
   display: flex;
   justify-content: center;
-  gap: 20px; /* Adds space between the buttons */
+  gap: 20px; /* Space between buttons */
+  margin-bottom: 10px; /* Space above the header */
 }
 
 .search-toggle button {
@@ -193,26 +194,42 @@ h1 {
   font-size: 16px; /* Adjust font size as needed */
   transition: color 0.3s; /* Smooth transition for color */
   position: relative; /* For positioning the line */
+  padding-bottom: 5px; /* Adjust as needed */
 }
 
-.search-toggle button:hover {
-  color: #007bff; /* Color change on hover, adjust as needed */
+.search-toggle button:hover, .search-toggle button.active {
+  color: black; /* Or any other color for active/hover state */
+}
+
+.search-toggle button:not(.active):hover {
+  color: black; /* Hovered button text color */
 }
 
 .search-toggle button.active {
   color: #007bff; /* Active state text color */
 }
 
-.search-toggle button.active:after {
+.search-toggle button:hover::after, .search-toggle button.active::after {
   content: '';
   position: absolute;
-  bottom: -10px; /* Adjust as needed */
+  bottom: 0;
   left: 0;
   right: 0;
-  height: 2px; /* Thickness of the line */
-  background-color: #007bff; /* Line color */
+  height: 2px;
+  background-color: #007bff; /* Or any other color for the underline */
   margin: 0 auto;
-  width: 50%; /* Adjust the width of the line as needed */
+  width: 70%; /* Full width for the line */
 }
 
+.search-toggle button:not(.active):hover::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: black; /* Hovered button underline color */
+  margin: 0 auto;
+  width: 70%; /* Full width of the line */
+}
 
