@@ -167,6 +167,21 @@ h1 {
   align-items: center;
 }
 
+.flight-search-form input {
+  border: none; /* Removes the border */
+  border-radius: 4px; /* Adds rounded edges */
+  padding: 10px;
+  /* ... other styles ... */
+}
+
+.flight-search-form button {
+  border: none; /* Removes the border */
+  border-radius: 4px; /* Adds rounded edges */
+  padding: 10px;
+  /* ... other existing styles ... */
+  /* Add any additional styles such as background color, text color, etc., as needed */
+}
+
 .input-column {
   flex: 1; /* Each column takes equal width */
   margin: 0 10px; /* Spacing between columns */
@@ -195,6 +210,23 @@ h1 {
   transition: color 0.3s; /* Smooth transition for color */
   position: relative; /* For positioning the line */
   padding-bottom: 5px; /* Adjust as needed */
+  overflow: hidden;
+}
+
+.search-toggle button::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background-color: black;
+  transition: width 0.4s ease;
+  /*Animatesthewidth*/position: absolute;
+  bottom: -10px;
+  left: 0;
+  -webkit-transition: width 0.4s ease;
+  -moz-transition: width 0.4s ease;
+  -ms-transition: width 0.4s ease;
+  -o-transition: width 0.4s ease;
 }
 
 .search-toggle button:hover, .search-toggle button.active {
