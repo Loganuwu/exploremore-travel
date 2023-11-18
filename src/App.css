@@ -302,3 +302,21 @@ h1 {
   border: 1px solid #ccc;
   border-radius: 4px;
 }
+
+.destination-list {
+  margin-top: 20px;
+}
+
+.destination-item {
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.destination-item img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
