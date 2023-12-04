@@ -3,11 +3,13 @@ import React, { useState } from 'react';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 import axios from 'axios';
+import LocationOnIcon from '@mui/icons-material/LocationOn';
+import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
 
 const StaysSearch = ({ onSearch }) => {
     const [location, setLocation] = useState('');
-    const [startDate, setStartDate] = useState(new Date());
-    const [endDate, setEndDate] = useState(new Date());
+    const [startDate, setStartDate] = useState(null); // Set initial state to null
+    const [endDate, setEndDate] = useState(null);     // Do the same for endDate if it's a range    
     const [hotels, setHotels] = useState([]);
 
     const formatDate = (date) => {
@@ -72,21 +74,39 @@ const StaysSearch = ({ onSearch }) => {
         handleSearch();
     };
 
+    const CustomDateInput = ({ value, onClick }) => (
+        <div className="date-input-icon-container">
+            <CalendarMonthIcon className="date-input-icon"/>
+            <input 
+                type="text" 
+                value={value}
+                onClick={onClick}
+                placeholder={value ? value : "Select dates"} // Custom placeholder
+            />
+        </div>
+    );
+    
+    
+
     return (
         <>
             <form onSubmit={handleSubmit} className="stay-search-form">
                 <div className="input-column">
-                    <label htmlFor="location">Location:</label>
-                    <input 
-                        type="text" 
-                        id="location"
-                        value={location}
-                        onChange={(e) => setLocation(e.target.value)}
-                        placeholder="Enter location" 
-                    />
+                <label htmlFor="location"> Location</label>
+                    <div className="input-with-icon">
+                        <LocationOnIcon className="location-icon"/>
+                        
+                        <input 
+                            type="text" 
+                            id="location"
+                            value={location}
+                            onChange={(e) => setLocation(e.target.value)}
+                            placeholder="Enter location" 
+                        />
+                    </div>
                 </div>
                 <div className="input-column">
-                    <label htmlFor="date-picker">Dates:</label>
+                    <label htmlFor="date-picker">Dates</label>
                     <DatePicker
                         selected={startDate}
                         onChange={(dates) => {
@@ -94,12 +114,15 @@ const StaysSearch = ({ onSearch }) => {
                             setStartDate(start);
                             setEndDate(end);
                         }}
+                        dateFormat="MMM d"
+                        customInput={<CustomDateInput />}
                         startDate={startDate}
                         endDate={endDate}
                         selectsRange
                     />
                 </div>
                 <div className="input-column">
+                <label style={{ visibility: 'hidden' }}>Search:</label> {/* Invisible label for alignment */}
                 <label style={{ visibility: 'hidden' }}>Search:</label> {/* Invisible label for alignment */}
                 <button type="submit">Search Stays</button>
                 </div>

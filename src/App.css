@@ -290,6 +290,19 @@ h1 {
   /* ... other styles ... */
 }
 
+.search-button-container {
+  display: flex;
+  align-items: center;
+  /* Other styling as needed */
+}
+
+.search-button {
+  margin-left: 10px; /* Or any value to adjust horizontal alignment */
+  padding: 0 15px; /* Adjust padding to match the height of inputs */
+  height: 40px; /* Set height to match the inputs including icons */
+  /* Additional styling as needed */
+}
+
 
 /* HotelSearch CSS -------------------------------------------------------------------------------------- */
 .hotel-list {
