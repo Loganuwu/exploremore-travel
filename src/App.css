@@ -89,15 +89,30 @@ h1 {
   font-weight: 200;
 }
 
+.app-logo {
+  position: fixed;
+  top: 10px;    /* Adjust as needed */
+  left: 10px;   /* Adjust as needed */
+  z-index: 1000; /* Ensures it stays on top of other content */
+  color: #3fa3ba;
+  /* Add more styling as needed (font, size, color, etc.) */
+}
+
+.main-content {
+  margin-top: 60px; /* Adjust as needed, should be enough to clear the fixed logo */
+}
+
+
 .airplane-svg {
   position: absolute; /* Position it independently of other elements */
   width: 1400px; /* Adjust the size as needed */
   opacity: 1; /* Adjust transparency */
-  top: 30%; /* Center vertically */
-  left: 50%; /* Center horizontally */
+  top: 35%; /* Center vertically */
+  left: 50%; /* Increase to move more to the right */
   transform: translate(-50%, -50%); /* Adjust for accurate centering */
   z-index: -1; /* Place it behind other content */
 }
+
 
 .search-container {
   /* Styles for the container */
@@ -133,6 +148,8 @@ h1 {
   font-family: 'Poppins', sans-serif;
   color: #2193b0;
 }
+
+
 
 /* FlightSearch CSS -------------------------------------------------------------------------------------- */
 

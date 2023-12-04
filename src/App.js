@@ -50,8 +50,10 @@ const App = () => {
                 </div>
     
                 {/* Header */}
-                <h1>ExploreMore Travel</h1>
-                
+                {/* <h1>ExploreMore Travel</h1> */}
+                <div className="app-logo">
+                    ExploreMore Travel
+                </div>
                 {/* Conditional rendering for FlightSearch or StaysSearch */}
                 {searchMode === 'flights' && <FlightSearch onSearch={handleFlightSearch} />}
                 {searchMode === 'stays' && <StaysSearch onSearch={handleStaysSearch} />} {/* Add this line */}
