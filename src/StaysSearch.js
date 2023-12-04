@@ -81,7 +81,8 @@ const StaysSearch = ({ onSearch }) => {
                 type="text" 
                 value={value}
                 onClick={onClick}
-                placeholder={value ? value : "Select dates"} // Custom placeholder
+                placeholder={!value ? "Select dates" : ''} // Custom placeholder
+                readOnly // Makes the input field not directly editable
             />
         </div>
     );
@@ -92,10 +93,8 @@ const StaysSearch = ({ onSearch }) => {
         <>
             <form onSubmit={handleSubmit} className="stay-search-form">
                 <div className="input-column">
-                <label htmlFor="location"> Location</label>
-                    <div className="input-with-icon">
-                        <LocationOnIcon className="location-icon"/>
-                        
+                    <div className="input-icon-container">
+                        <LocationOnIcon className="input-icon"/>
                         <input 
                             type="text" 
                             id="location"
@@ -122,6 +121,9 @@ const StaysSearch = ({ onSearch }) => {
                     />
                 </div>
                 <div className="input-column">
+                        <div className="input-icon-container">
+
+                        </div>
                 <label style={{ visibility: 'hidden' }}>Search:</label> {/* Invisible label for alignment */}
                 <label style={{ visibility: 'hidden' }}>Search:</label> {/* Invisible label for alignment */}
                 <button type="submit">Search Stays</button>

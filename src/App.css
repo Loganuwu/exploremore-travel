@@ -282,6 +282,66 @@ h1 {
   width: 80%; /* Full width of the line */
 }
 
+/* ICONS --------------------------------------------------------------------------------------  */
+
+.input-icon-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input-icon {
+  position: absolute;
+  left: 10px; /* Adjust as needed */
+  z-index: 10;
+}
+
+.input-icon-container input, 
+.input-icon-container .react-datepicker__input-container input {
+    padding-left: 30px; /* Adjust as needed to make room for the icon */
+    width: 100%; /* Ensure input field takes full width of the container */
+}
+
+
+.location-icon, .date-input-icon {
+  margin-right: 10px; /* Creates a gap between the icon and the input field */
+  /* Additional styling for the icons as needed */
+}
+
+.input-with-icon input, .date-input-icon-container input {
+  flex-grow: 1; /* Allows the input to take up remaining space */
+  padding-left: 10px; /* Adjust as needed for spacing inside the input */
+  /* Additional styling for the input fields as needed */
+}
+
+.location-icon, .date-input-icon {
+  font-size: 24px; /* Adjust the size as needed */
+}
+
+/* ICONS --------------------------------------------------------------------------------------  */
+
+
+/* DATES --------------------------------------------------------------------------------------  */
+.date-input-icon-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.date-input-icon {
+  position: absolute;
+  left: 10px; /* Adjust as needed */
+  color: #757575; /* Adjust the color as needed */
+}
+
+.date-input-icon-container input {
+  padding-left: 70px; /* Adjust as needed to make room for the icon */
+  width: 100%; /* Ensure input field takes full width of the container */
+}
+
+/* DATES --------------------------------------------------------------------------------------  */
+
+
 /* StaysSearch CSS -------------------------------------------------------------------------------------- */
 
 .stay-search-form {
