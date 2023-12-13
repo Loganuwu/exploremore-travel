@@ -93,6 +93,7 @@ const StaysSearch = ({ onSearch }) => {
         <>
             <form onSubmit={handleSubmit} className="stay-search-form">
                 <div className="input-column">
+                <label htmlFor="date-picker">Location</label>
                     <div className="input-icon-container">
                         <LocationOnIcon className="input-icon"/>
                         <input 
@@ -124,7 +125,6 @@ const StaysSearch = ({ onSearch }) => {
                         <div className="input-icon-container">
 
                         </div>
-                <label style={{ visibility: 'hidden' }}>Search:</label> {/* Invisible label for alignment */}
                 <label style={{ visibility: 'hidden' }}>Search:</label> {/* Invisible label for alignment */}
                 <button type="submit">Search Stays</button>
                 </div>
