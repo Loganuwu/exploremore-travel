@@ -395,6 +395,11 @@ h1 {
   /* Other styles to match the inputs */
 }
 
+.search-button:hover {
+  transition: background-color 0.3s;
+  background-color: rgba(58, 58, 58, 0.514); 
+}
+
 .input-with-icon .icon {
   margin-right: 10px; /* Space between the icon and the input field */
 }
