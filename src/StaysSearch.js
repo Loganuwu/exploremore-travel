@@ -75,17 +75,19 @@ const StaysSearch = ({ onSearch }) => {
     };
 
     const CustomDateInput = ({ value, onClick }) => (
-        <div className="date-input-icon-container">
-            <CalendarMonthIcon className="date-input-icon"/>
+        <div className="input-with-icon">
+            <CalendarMonthIcon className="icon" />
             <input 
                 type="text" 
-                value={value}
                 onClick={onClick}
+                value={value}
                 placeholder={!value ? "Select dates" : ''} // Custom placeholder
-                readOnly // Makes the input field not directly editable
+                readOnly // Ensures the field is not editable
+                className="date-input" // Use this class for styling
             />
         </div>
     );
+    
     
     
 
@@ -108,26 +110,26 @@ const StaysSearch = ({ onSearch }) => {
 
                 <div className="input-column">
                     <label htmlFor="date-picker">Dates</label>
-                    <DatePicker
-                        selected={startDate}
-                        onChange={(dates) => {
-                            const [start, end] = dates;
-                            setStartDate(start);
-                            setEndDate(end);
-                        }}
-                        dateFormat="MMM d"
-                        customInput={<CustomDateInput />}
-                        startDate={startDate}
-                        endDate={endDate}
-                        selectsRange
-                    />
+                        <DatePicker
+                            selected={startDate}
+                            onChange={(dates) => {
+                                const [start, end] = dates;
+                                setStartDate(start);
+                                setEndDate(end);
+                            }}
+                            dateFormat="MMM d"
+                            customInput={<CustomDateInput />}
+                            startDate={startDate}
+                            endDate={endDate}
+                            selectsRange
+                        />
                 </div>
                 <div className="input-column">
                         <div className="input-icon-container">
 
                         </div>
                 <label style={{ visibility: 'hidden' }}>Search:</label> {/* Invisible label for alignment */}
-                <button type="submit">Search Stays</button>
+                <button type="submit" className='search-button'>Search Stays</button>
                 </div>
             </form>
 

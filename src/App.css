@@ -373,6 +373,45 @@ h1 {
   width: 100%; /* Ensure input field takes full width of the container */
 }
 
+.search-button {
+  padding: 10px; /* Match the padding of the inputs */
+  height: 48px; /* Match the height of the inputs if specified */
+  font-size: 16px; /* Match the font-size of the inputs if necessary */
+  /* Other styles to match the inputs */
+}
+
+.input-with-icon .icon {
+  margin-right: 10px; /* Space between the icon and the input field */
+}
+
+.input-with-icon input,
+.input-with-icon .react-datepicker__input-container input {
+  flex-grow: 1;
+  border: none; /* Remove the border from the input field */
+  padding: 10px; /* Match padding to the Location input */
+}
+
+.input-with-icon input:focus {
+  outline: none; /* Remove the focus outline */
+}
+
+.input-with-icon input {
+  flex-grow: 1;
+  border: none; /* This removes the border from the input field */
+  padding: 10px; /* Adjust padding to match design */
+  outline: none; /* This removes the outline when the input is focused */
+  /* Additional styles as needed */
+}
+
+.input-with-icon .date-input {
+  border: none;
+  outline: none; 
+  flex-grow: 1; 
+  padding: 10px; 
+}
+
+
+
 /* DATES --------------------------------------------------------------------------------------  */
 
 
@@ -413,6 +452,22 @@ h1 {
   height: 40px; /* Set height to match the inputs including icons */
   /* Additional styling as needed */
 }
+
+.stay-search-form .input-column {
+  display: flex;
+  align-items: center; /* This vertically centers the button with the inputs */
+  /* Other styles */
+}
+
+.search-button {
+  padding: 10px; /* Adjust the vertical padding to match the input fields */
+  height: 65px; /* Match the height of the input fields */
+  font-size: 16px; /* Match the font size of the input fields if necessary */
+  border: 1px solid #ccc; /* Match the border of the input fields */
+  border-radius: 4px; /* Match the border-radius of the input fields */
+  /* Add any additional styles to match the input fields */
+}
+
 
 
 /* HotelSearch CSS -------------------------------------------------------------------------------------- */
