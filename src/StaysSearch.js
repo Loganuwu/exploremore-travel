@@ -93,18 +93,19 @@ const StaysSearch = ({ onSearch }) => {
         <>
             <form onSubmit={handleSubmit} className="stay-search-form">
                 <div className="input-column">
-                <label htmlFor="date-picker">Location</label>
-                    <div className="input-icon-container">
-                        <LocationOnIcon className="input-icon"/>
-                        <input 
-                            type="text" 
-                            id="location"
-                            value={location}
-                            onChange={(e) => setLocation(e.target.value)}
-                            placeholder="Enter location" 
-                        />
-                    </div>
+                        <label htmlFor="location">Location</label>
+                        <div className="input-with-icon">
+                            <LocationOnIcon className="icon" />
+                            <input 
+                                type="text" 
+                                id="location"
+                                value={location}
+                                onChange={(e) => setLocation(e.target.value)}
+                                placeholder="Enter location" 
+                            />
+                        </div>
                 </div>
+
                 <div className="input-column">
                     <label htmlFor="date-picker">Dates</label>
                     <DatePicker

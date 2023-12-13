@@ -318,6 +318,40 @@ h1 {
   font-size: 24px; /* Adjust the size as needed */
 }
 
+.input-with-icon {
+  display: flex;
+  align-items: center;
+  border-radius: 4px;
+  color: white;
+  background-color: white;
+  padding: 5px;
+}
+
+.input-with-icon .icon {
+  margin-right: 10px; /* Adjust the space between the icon and the input field */
+  color: #757575;
+  /* No need to set position to absolute anymore */
+}
+
+.input-with-icon input {
+  flex-grow: 1;
+  border: none; /* Remove the border from the input field */
+  padding: 10px; /* Adjust padding to match design */
+  /* Ensure the input background matches the container if needed */
+}
+
+.input-column label {
+  display: block;
+  margin-bottom: 5px; /* Adjust as needed */
+  /* Additional label styling here */
+}
+
+#location {
+  border: none; /* Removes the border */
+  outline: none; /* Removes the outline on focus */
+  /* Other styling as needed */
+}
+
 /* ICONS --------------------------------------------------------------------------------------  */
 
 
