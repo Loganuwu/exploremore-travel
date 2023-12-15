@@ -1,0 +1,27 @@
+.attractions-search-form {
+    display: flex;
+    align-items: center;
+}
+
+.input-with-icon {
+    display: flex;
+    align-items: center;
+    flex-grow: 1; /* Allows input to take available space */
+}
+
+.input-with-icon .icon {
+    margin-right: 10px; /* Space between the icon and the input */
+}
+
+.attractions-search-form .search-button {
+    /* Additional styles for the button */
+    margin-left: 10px; /* Space between the input and the button */
+}
+
+
+.search-toggle button.active {
+    color: #007bff;
+    /* Other styles for the active state */
+}
+
+
