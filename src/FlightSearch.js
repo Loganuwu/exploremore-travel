@@ -8,6 +8,7 @@ const FlightSearch = ({ onSearch }) => {
     const [from, setFrom] = useState('');
     const [to, setTo] = useState('');
     const [date, setDate] = useState(new Date()); // Define date state variable for single date picker
+    const [flights, setFlights] = useState([]);
 
     const formatDate = (date) => {
         return date.toISOString().split('T')[0]; // Format date to YYYY-MM-DD
@@ -24,11 +25,11 @@ const FlightSearch = ({ onSearch }) => {
     };
 
     const handleFlightSearch = async () => {
-        // Define your API call parameters
+        const formattedDate = date.toISOString().split('T')[0];
         const params = {
             sourceAirportCode: from,
             destinationAirportCode: to,
-            date: formatDate(date), // Use the formatted date
+            date: formattedDate,
             itineraryType: 'ONE_WAY',
             sortOrder: 'PRICE',
             numAdults: '1',
@@ -65,43 +66,60 @@ const FlightSearch = ({ onSearch }) => {
     );
 
     return (
-        <form onSubmit={handleSubmit} className='flight-search-form'>
-            {/* From and To input fields */}
-            <div className="input-column">
-                <label htmlFor="from">From</label>
-                <input 
-                    type="text" 
-                    id="from"
-                    value={from}
-                    onChange={(e) => setFrom(e.target.value)}
-                    placeholder="From airport code" // Updated placeholder
-                />
-            </div>
-            <div className="input-column">
-                <label htmlFor="to">To</label>
-                <input 
-                    type="text" 
-                    id="to"
-                    value={to}
-                    onChange={(e) => setTo(e.target.value)}
-                    placeholder="To airport code" // Updated placeholder
-                />
-            </div>
-            {/* DATE PICKER HERE */}
-            <div className="input-column">
-                <label htmlFor="date-picker">Date</label> {/* Changed to singular */}
-                <DatePicker
-                    selected={date}
-                    onChange={setDate} // Update to use setDate for single date
-                    customInput={<CustomInput />}
-                    popperPlacement="bottom"
-                />
-            </div>
-            <div className="input-column">
-                <label style={{ visibility: 'hidden' }}>Search:</label> {/* Invisible label */}
-                <button type="submit">Search Flights</button>
-            </div>
-        </form>
-    );
+        <>
+            <form onSubmit={handleSubmit} className='flight-search-form'>
+                {/* From and To input fields */}
+                <div className="input-column">
+                    <label htmlFor="from">From</label>
+                    <input 
+                        type="text" 
+                        id="from"
+                        value={from}
+                        onChange={(e) => setFrom(e.target.value)}
+                        placeholder="From airport code" 
+                    />
+                </div>
+                <div className="input-column">
+                    <label htmlFor="to">To</label>
+                    <input 
+                        type="text" 
+                        id="to"
+                        value={to}
+                        onChange={(e) => setTo(e.target.value)}
+                        placeholder="To airport code" 
+                    />
+                </div>
+                {/* DATE PICKER */}
+                <div className="input-column">
+                    <label htmlFor="date-picker">Date</label>
+                    <DatePicker
+                        selected={date}
+                        onChange={setDate}
+                        customInput={<CustomInput />}
+                        popperPlacement="bottom"
+                    />
+                </div>
+                <div className="input-column">
+                    <label style={{ visibility: 'hidden' }}>Search:</label>
+                    <button type="submit">Search Flights</button>
+                </div>
+            </form>
+    
+        {/* Flight Results */}
+        <div className="flight-results">
+            {flights?.flights?.map((flight, index) => (
+                flight.purchaseLinks.map((link, linkIndex) => (
+                    <div key={`${index}-${linkIndex}`} className="flight-item">
+                        <h3>{flight.providerId}</h3>
+                        <img src={link.partnerSuppliedProvider.logoUrl} alt={flight.providerId} />
+                        <p>${link.totalPrice}</p>
+                        <a href={link.url} target="_blank" rel="noopener noreferrer">Book Here</a>
+                    </div>
+                ))
+            ))}
+        </div>
+    </>
+);
+    
 };
 export default FlightSearch;
