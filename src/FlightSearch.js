@@ -5,12 +5,12 @@ import 'react-datepicker/dist/react-datepicker.css';
 const FlightSearch = ({ onSearch, searchMode }) => {
     const [from, setFrom] = useState('');
     const [to, setTo] = useState('');
-    const [startDate, setStartDate] = useState(new Date());
-    const [endDate, setEndDate] = useState(new Date());
+    const [date, setDate] = useState(new Date()); // Define date state variable for single date picker
+
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        onSearch({ from, to, date: startDate, endDate });
+        onSearch({ from, to, date });
     };
 
     const handleFlightSearch = (searchParams) => {
@@ -40,19 +40,16 @@ const FlightSearch = ({ onSearch, searchMode }) => {
         
     };
 
-    const [isDatePickerVisible, setIsDatePickerVisible] = useState(false);
     const CustomInput = ({ value, onClick }) => (
         <input
             type="text"
             className="date-input"
             value={value}
-            onClick={() => setIsDatePickerVisible(!isDatePickerVisible)} // Toggle the visibility
+            onClick={onClick} // Directly pass the onClick
             readOnly // Prevent manual editing
-            placeholder="Select dates"
+            placeholder="Select date" // Changed to singular
         />
-        
     );
-    
 
     return (
         <form onSubmit={handleSubmit} className='flight-search-form'>
@@ -64,7 +61,7 @@ const FlightSearch = ({ onSearch, searchMode }) => {
                     id="from"
                     value={from}
                     onChange={(e) => setFrom(e.target.value)}
-                    placeholder="Enter departure city" 
+                    placeholder="From airport code" // Updated placeholder
                 />
             </div>
             <div className="input-column">
@@ -74,34 +71,23 @@ const FlightSearch = ({ onSearch, searchMode }) => {
                     id="to"
                     value={to}
                     onChange={(e) => setTo(e.target.value)}
-                    placeholder="Enter destination city" 
+                    placeholder="To airport code" // Updated placeholder
                 />
             </div>
-            {/* DATE PICKER HERE -----------------------------------------------  */}
+            {/* DATE PICKER HERE */}
             <div className="input-column">
-                <label htmlFor="date-picker">Dates</label>
+                <label htmlFor="date-picker">Date</label> {/* Changed to singular */}
                 <DatePicker
-                    selected={startDate}
-                    onChange={(dates) => {
-                        const [start, end] = dates;
-                        setStartDate(start);
-                        setEndDate(end);
-                        if (end) setIsDatePickerVisible(false); // Hide after selecting range
-                    }}
-                    startDate={startDate}
-                    endDate={endDate}
-                    selectsRange
+                    selected={date}
+                    onChange={setDate} // Update to use setDate for single date
                     customInput={<CustomInput />}
                     popperPlacement="bottom"
-                    shouldCloseOnSelect={false} // Keep open to select end date
-                    open={isDatePickerVisible}
                 />
             </div>
             <div className="input-column">
                 <label style={{ visibility: 'hidden' }}>Search:</label> {/* Invisible label */}
                 <button type="submit">Search Flights</button>
             </div>
-
         </form>
     );
 };
