@@ -108,28 +108,27 @@ const FlightSearch = ({ onSearch }) => {
                 </div>
             </form>
     
-         {/* Loading and Flight Results */}
+         {/* Flight Results */}
         {isLoading ? (
             <div className="loading-container">
                 <span>Loading...</span> {/* Replace with a spinner or loading icon */}
             </div>
         ) : (
             <div className="flight-results">
-                {flights?.flights?.map((flight, index) =>
+                {flights?.flights?.map((flight, index) => (
                     flight.purchaseLinks.map((link, linkIndex) => (
                         <div key={`${index}-${linkIndex}`} className="flight-item">
-                            <h3>{flight.providerId}</h3>
-                            <img src={link.partnerSuppliedProvider.logoUrl} alt={flight.providerId} />
+                            <h3>{link.providerId}</h3>
+                            <img src={link.partnerSuppliedProvider.logoUrl} alt={link.providerId} />
                             <p>${link.totalPrice}</p>
                             <a href={link.url} target="_blank" rel="noopener noreferrer">Book Here</a>
                         </div>
                     ))
-                )}
+                ))}
             </div>
         )}
-
-        </>
-    );
+    </>
+);
 };
 
 export default FlightSearch;
