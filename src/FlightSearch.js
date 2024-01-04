@@ -4,7 +4,7 @@ import 'react-datepicker/dist/react-datepicker.css';
 import axios from 'axios';
 
 
-const FlightSearch = ({ onSearch, searchMode }) => {
+const FlightSearch = ({ onSearch }) => {
     const [from, setFrom] = useState('');
     const [to, setTo] = useState('');
     const [date, setDate] = useState(new Date()); // Define date state variable for single date picker
@@ -16,7 +16,11 @@ const FlightSearch = ({ onSearch, searchMode }) => {
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        onSearch({ from, to, date });
+        if (onSearch) {
+            onSearch({ from, to, date });
+        } else {
+            handleFlightSearch();
+        }
     };
 
     const handleFlightSearch = async () => {
