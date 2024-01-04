@@ -1,11 +1,17 @@
 import React, { useState } from 'react';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
+import axios from 'axios';
+
 
 const FlightSearch = ({ onSearch, searchMode }) => {
     const [from, setFrom] = useState('');
     const [to, setTo] = useState('');
     const [date, setDate] = useState(new Date()); // Define date state variable for single date picker
+
+    const formatDate = (date) => {
+        return date.toISOString().split('T')[0]; // Format date to YYYY-MM-DD
+    };
 
 
     const handleSubmit = (event) => {
@@ -13,31 +19,34 @@ const FlightSearch = ({ onSearch, searchMode }) => {
         onSearch({ from, to, date });
     };
 
-    const handleFlightSearch = (searchParams) => {
-        const url = new URL('https://tripadvisor16.p.rapidapi.com/api/v1/flights/searchFlights');
-        url.search = new URLSearchParams({
-            sourceAirportCode: searchParams.from,
-            destinationAirportCode: searchParams.to,
-            date: searchParams.date.toISOString().split('T')[0], // Format date to YYYY-MM-DD
-            // Add other required parameters
-        });
-    
-        fetch(url, {
-            method: 'GET',
-            headers: {
-                'X-RapidAPI-Key': '8d36f60e47msha974aed1faa2b08p16ca05jsna91e6d65d953',
-                'X-RapidAPI-Host': 'tripadvisor16.p.rapidapi.com'
-            }
-        })
-        .then(response => response.json())
-        .then(data => {
-            // Process and display flight data
-        })
-        .catch(error => {
-            console.error('Error fetching flight data:', error);
-        });
+    const handleFlightSearch = async () => {
+        // Define your API call parameters
+        const params = {
+            sourceAirportCode: from,
+            destinationAirportCode: to,
+            date: formatDate(date), // Use the formatted date
+            itineraryType: 'ONE_WAY',
+            sortOrder: 'PRICE',
+            numAdults: '1',
+            numSeniors: '0',
+            classOfService: 'ECONOMY',
+            pageNumber: '1',
+            currencyCode: 'USD'
+        };
 
-        
+        try {
+            const response = await axios.get('https://tripadvisor16.p.rapidapi.com/api/v1/flights/searchFlights', {
+                params: params,
+                headers: {
+                    'X-RapidAPI-Key': '8d36f60e47msha974aed1faa2b08p16ca05jsna91e6d65d953',
+                    'X-RapidAPI-Host': 'tripadvisor16.p.rapidapi.com'
+                }
+            });
+            console.log(response.data);
+            // Process the response data as needed
+        } catch (error) {
+            console.error('Error fetching flight data:', error);
+        }
     };
 
     const CustomInput = ({ value, onClick }) => (
