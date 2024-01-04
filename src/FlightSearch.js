@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 import axios from 'axios';
+import './FlightSearch.css';
 
 
 const FlightSearch = ({ onSearch }) => {
@@ -9,6 +10,7 @@ const FlightSearch = ({ onSearch }) => {
     const [to, setTo] = useState('');
     const [date, setDate] = useState(new Date()); // Define date state variable for single date picker
     const [flights, setFlights] = useState([]);
+    const [isLoading, setIsLoading] = useState(false);
 
     const formatDate = (date) => {
         return date.toISOString().split('T')[0]; // Format date to YYYY-MM-DD
@@ -17,6 +19,7 @@ const FlightSearch = ({ onSearch }) => {
 
     const handleSubmit = (event) => {
         event.preventDefault();
+        setIsLoading(true);
         if (onSearch) {
             onSearch({ from, to, date });
         } else {
@@ -105,21 +108,27 @@ const FlightSearch = ({ onSearch }) => {
                 </div>
             </form>
     
-        {/* Flight Results */}
-        <div className="flight-results">
-            {flights?.flights?.map((flight, index) => (
-                flight.purchaseLinks.map((link, linkIndex) => (
-                    <div key={`${index}-${linkIndex}`} className="flight-item">
-                        <h3>{flight.providerId}</h3>
-                        <img src={link.partnerSuppliedProvider.logoUrl} alt={flight.providerId} />
-                        <p>${link.totalPrice}</p>
-                        <a href={link.url} target="_blank" rel="noopener noreferrer">Book Here</a>
-                    </div>
-                ))
-            ))}
-        </div>
-    </>
-);
-    
+         {/* Loading and Flight Results */}
+         {isLoading ? (
+                <div className="loading-container">
+                    <span>Loading...</span> {/* Replace with a spinner or loading icon */}
+                </div>
+            ) : (
+                <div className="flight-results">
+                    {flights?.flights?.map((flight, index) => (
+                        flight.purchaseLinks.map((link, linkIndex) => (
+                            <div key={`${index}-${linkIndex}`} className="flight-item">
+                                <h3>{flight.providerId}</h3>
+                                <img src={link.partnerSuppliedProvider.logoUrl} alt={flight.providerId} />
+                                <p>${link.totalPrice}</p>
+                                <a href={link.url} target="_blank" rel="noopener noreferrer">Book Here</a>
+                            </div>
+                        ))
+                    ))}
+                </div>
+            )}
+        </>
+    );
 };
+
 export default FlightSearch;

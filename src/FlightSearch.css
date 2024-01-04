@@ -1,0 +1,20 @@
+.loading-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px; /* Adjust as needed */
+}
+
+.flight-results {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columns */
+    gap: 10px; /* Adjust the gap between grid items */
+    margin-top: 20px; /* Space above the grid */
+}
+
+.flight-item {
+    /* Style each flight item */
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+}
