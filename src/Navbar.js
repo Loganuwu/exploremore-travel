@@ -11,9 +11,10 @@ const Navbar = () => {
         <Link to="/contact-us" className="nav-link">Contact Us</Link>
         <Link to="/about-us" className="nav-link">About Us</Link>
         <Link to="/privacy" className="nav-link">Privacy</Link>
+        <Link to="/destinations" className="nav-link">Destinations Guide</Link>
         {/* Add more nav links as needed */}
       </nav>
     );
   };
 
-export default Navbar; // Ensure this is at the end of the Navbar.js file
+export default Navbar; 

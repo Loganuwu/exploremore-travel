@@ -25,7 +25,7 @@ const Support = () => {
               <InfoIcon /> {/* Info icon for About Us */}
             </div>
           </Link>
-        <p>ExploreMore is your trusted travel partner, dedicated to enriching your travel experiences...</p>
+        <p>ExploreMore is your trusted travel partner, dedicated to enriching your travel experiences Whether you're looking for flights, hotels, or local attractions, ExploreMore is dedicated to providing a seamless and personalized travel planning experience.</p>
       </div>
 
       <div className="support-column">
@@ -35,7 +35,7 @@ const Support = () => {
               <SecurityIcon /> {/* Security icon for Privacy */}
             </div>
           </Link>
-        <p>Your privacy is paramount at ExploreMore...</p>
+        <p>Your privacy is paramount at ExploreMore</p>
       </div>
     </div>
   );

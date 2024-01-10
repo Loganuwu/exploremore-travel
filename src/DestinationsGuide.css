@@ -1,34 +1,33 @@
-.privacy-container {
+.destinations-guide-container {
     width: 80%;
     margin: 0 auto;
     padding: 20px;
     font-family: 'Poppins', sans-serif;
-    font-weight: 700;
   }
   
-  .privacy-container h1 {
+  .destinations-guide-container h1 {
     text-align: center;
     color: #0056b3;
   }
   
-  .privacy-grid {
+  .destinations-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
   }
   
-  .privacy-container section {
+  .destination {
     background-color: #f9f9f9;
     padding: 20px;
     border-radius: 10px;
     border: 1px solid #ddd;
   }
   
-  .privacy-container h2 {
+  .destination h2 {
     color: #007bff;
   }
   
-  .privacy-container p {
+  .destination p {
     text-align: justify;
     line-height: 1.6;
     color: #333;
@@ -36,13 +35,16 @@
   
   /* Responsive layout for smaller screens */
   @media (max-width: 1024px) {
-    .privacy-grid {
-      grid-template-columns: 1fr; /* Stack the sections on smaller screens */
+    .destinations-grid {
+      grid-template-columns: 1fr 1fr; /* 2 columns for medium screens */
     }
   }
   
   @media (max-width: 768px) {
-    .privacy-container {
+    .destinations-grid {
+      grid-template-columns: 1fr; /* 1 column for small screens */
+    }
+    .destinations-guide-container {
       width: 95%;
     }
   }
