@@ -12,8 +12,7 @@ const ContactUs = () => {
         
         <div className="contact-info email">
         <EmailIcon className="contact-icon" /> {/* Email SVG icon */}
-          <p>
-            For any inquiries, assistance, or feedback, our ExploreMore customer support team is ready to help you. Reach out to us via email at
+          <p>For any inquiries, assistance, or feedback, our ExploreMore customer support team is ready to help you. Reach out to us via email at
             <a href="mailto:support@exploremore.com"> support@exploremore.com</a>
           </p>
         </div>
