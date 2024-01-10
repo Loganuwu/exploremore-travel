@@ -4,6 +4,7 @@ import StaysSearch from './StaysSearch';
 import AttractionsSearch from './attractionSearch';
 import './App.css'; // Assuming this is where you define styles for your main component
 
+
 const App = () => {
     const [activeSearchType, setActiveSearchType] = useState('Flights'); // Default to 'Flights'
 
