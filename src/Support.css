@@ -16,3 +16,16 @@
     }
   }
   
+  .support-container {
+    display: flex; /* Use flexbox to create a row of boxes */
+    justify-content: space-around; /* Space the boxes evenly */
+  }
+  
+  .support-box {
+    flex: 1; /* Each box will take up equal space */
+    margin: 10px; /* Spacing between boxes */
+    padding: 20px; /* Padding inside boxes */
+    border: 1px solid #ccc; /* Border for visual structure */
+    text-align: center; /* Center text inside the box */
+  }
+  

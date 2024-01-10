@@ -1,22 +1,14 @@
 import React from 'react';
 import './Support.css';
 const Support = () => {
-  return (
-    <div className="support-page">
-      <div className="support-section">
-        <h2>Contact Us</h2>
-        {/* Content for contact us */}
+    return (
+      <div className="support-container">
+        <div className="support-box">Contact Us</div>
+        <div className="support-box">About Us</div>
+        <div className="support-box">Privacy</div>
       </div>
-      <div className="support-section">
-        <h2>About Us</h2>
-        {/* Content for about us */}
-      </div>
-      <div className="support-section">
-        <h2>Privacy</h2>
-        {/* Content for privacy */}
-      </div>
-    </div>
-  );
-};
+    );
+  };
+  
 
 export default Support;
