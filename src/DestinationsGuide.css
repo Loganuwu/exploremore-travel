@@ -3,6 +3,7 @@
     margin: 0 auto;
     padding: 20px;
     font-family: 'Poppins', sans-serif;
+    font-size: 14px;
   }
   
   .destinations-guide-container h1 {
@@ -32,6 +33,34 @@
     line-height: 1.6;
     color: #333;
   }
+
+  .destination-image {
+    width: 100%; /* Full width of the container */
+    height: 170px; /* Fixed height for all images */
+    background-size: cover;
+    background-position: center;
+    margin-top: 5px; /* Space between text and image */
+  }
+
+  #rome-image {
+    background-image: url('https://www.fodors.com/wp-content/uploads/2018/10/HERO_UltimateRome_Hero_shutterstock789412159.jpg');
+  }
+  #mexico-image {
+    background-image: url('https://www.fodors.com/wp-content/uploads/2021/05/UltimateMexicoCity__HERO_shutterstock_1058054480.jpg');
+  }
+  #california-image {
+    background-image: url('https://www.introducinglosangeles.com/f/estados-unidos/los-angeles/guia/los-angeles.jpg');
+  }
+  #newyork-image {
+    background-image: url('https://cdn.britannica.com/61/93061-050-99147DCE/Statue-of-Liberty-Island-New-York-Bay.jpg');
+  }
+  #france-image {
+    background-image: url('https://res.klook.com/image/upload/Mobile/City/swox6wjsl5ndvkv5jvum.jpg');
+  }
+  #japan-image {
+    background-image: url('https://media.cntraveler.com/photos/60341fbad7bd3b27823c9db2/4:3/w_4624,h_3468,c_limit/Tokyo-2021-GettyImages-1208124099.jpg');
+  }
+  
   
   /* Responsive layout for smaller screens */
   @media (max-width: 1024px) {
