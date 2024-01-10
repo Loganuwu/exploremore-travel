@@ -11,41 +11,54 @@
     margin-bottom: 40px;
   }
   
-  .resources-section, .tools-section, .links-section {
-    margin-bottom: 30px;
-    padding: 15px;
+  .content-grid {
+    display: grid;
+    grid-template-columns: 3fr 2fr; /* Larger column for downloadable content */
+    gap: 20px;
+  }
+  
+  .downloadable-content, .tools-links-column {
+    padding: 20px;
     background-color: #f9f9f9;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+  }
+  
+  .downloadable-content {
+    grid-row: 1 / span 2; /* Span across two rows */
+  }
+  
+  .tools-links-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .tools-section, .links-section {
+    /* Styles for tools and links sections */
+    flex: 1; /* Each takes equal space */
+  }
+  
+  .itinerary-image {
+    max-width: 80%;
+    height: 500px; /* Adjusted as requested */
+    margin-top: 20px;
+    border: 1px solid #ddd;
     border-radius: 10px;
   }
   
-  .resources-section h2, .tools-section h2, .links-section h2 {
-    color: #007bff;
-  }
-  
-  .resources-section p, .tools-section p, .links-section p {
-    color: #333;
-    text-align: left;
-    line-height: 1.6;
-  }
-  
-  .links-section ul {
-    list-style: none; /* Removes default list styling */
-    padding: 0;
-  }
-  
-  .links-section li a {
-    color: #007bff;
-    text-decoration: none; /* Removes default underline */
-  }
-  
-  .links-section li a:hover {
-    text-decoration: underline; /* Adds underline on hover */
-  }
+  /* ... other styles ... */
   
   /* Responsive design */
   @media (max-width: 768px) {
     .resources-tools-container {
       width: 95%;
+    }
+    .content-grid {
+      grid-template-columns: 1fr; /* Stack on smaller screens */
+    }
+    .downloadable-content {
+      grid-row: auto; /* Reset to default on smaller screens */
     }
   }
   
