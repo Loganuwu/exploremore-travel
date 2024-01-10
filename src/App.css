@@ -13,6 +13,20 @@
   }
 }
 
+.app-header {
+  width: 100%;
+  padding: 10px 20px;
+}
+
+.website-title {
+  margin: 0;
+  font-size: 54px; /* Adjust the size as needed */
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+}
+
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;

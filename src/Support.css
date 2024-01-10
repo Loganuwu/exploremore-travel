@@ -1,0 +1,17 @@
+.support-page {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  .support-section {
+    /* Styling for the sections */
+  }
+  
+  @media (max-width: 768px) {
+    .support-page {
+      grid-template-columns: 1fr; /* Stack columns on smaller screens */
+    }
+  }
+  

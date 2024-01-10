@@ -9,6 +9,9 @@ const App = () => {
 
     return (
         <>
+                        <header className="app-header">
+                            <h1 className="website-title">ExploreMore</h1>
+                        </header>
             <div className="search-container">
                 <div className="search-toggle">
                     <button onClick={() => setActiveSearchType('Flights')} className={activeSearchType === 'Flights' ? 'active' : ''}>Flights</button>
