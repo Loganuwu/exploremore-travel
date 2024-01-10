@@ -1,54 +1,98 @@
 .contact-us-container {
-    width: 80%;
-    margin: 0 auto;
-    padding: 20px;
-    text-align: center;
-  }
-  
-  .contact-form {
-    margin-top: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .contact-form label {
-    margin-bottom: 5px;
-    font-weight: bold;
-  }
-  
-  .contact-form input,
-  .contact-form textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 20px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-  }
-  
-  .contact-form textarea {
-    height: 150px;
-    resize: vertical;
-  }
-  
-  .contact-form button {
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    background-color: #007bff;
-    color: white;
-    cursor: pointer;
-  }
-  
-  .contact-form button:hover {
-    background-color: #0056b3;
-  }
-  
-  .contact-icon {
-    display: block;
-    margin: 0 auto; /* Center the icon */
-    height: 100px; /* Adjust the size as needed */
-    width: 100px; /* Adjust the size as needed */
-    margin-bottom: 20px; /* Space between the icon and the form */
-  }
-  
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+  font-family: 'Poppins', sans-serif; /* Apply Poppins font to the entire container */
+  font-weight: 700; /* Apply the font weight of 500 to all text */
+}
+
+.contact-us-grid {
+  display: grid;
+  grid-template-columns: 2fr 2fr 2fr; /* Adjust the ratio as needed */
+  gap: 30px;
+  align-items: start;
+  margin-top: 20px;
+}
+
+.contact-form-container {
+  text-align: center;
+}
+
+.contact-icon {
+  display: block;
+  margin: 0 auto;
+  height: 100px; /* Adjust the size as needed */
+  width: 100px; /* Adjust the size as needed */
+  margin-bottom: 20px;
+}
+
+.contact-info {
+  background: #f9f9f9; /* Light background for emphasis */
+  padding: 20px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* This will vertically center the content */
+  height: 100%; /* Make the column fill the height */
+}
+
+.contact-info.email {
+  text-align: right; /* Aligns email info to the right */
+}
+
+.contact-info.phone {
+  text-align: left; /* Aligns phone info to the left */
+}
+
+.contact-info p {
+  margin: 0;
+}
+
+.contact-info a {
+  color: #007bff; /* Use your theme's color */
+  text-decoration: none;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+  width: 100%; /* Full width of the column */
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.contact-form textarea {
+  height: 100px; /* Adjust the height as needed */
+  resize: vertical;
+}
+
+.contact-form button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  background-color: #0056b3;
+}
+
+/* Additional CSS to make email and phone columns longer */
+.contact-info {
+  flex-grow: 1; /* This will make the columns grow to fill the space */
+}
