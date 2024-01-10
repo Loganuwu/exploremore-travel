@@ -1,0 +1,51 @@
+.resources-tools-container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+  }
+  
+  .resources-tools-container h1 {
+    color: #0056b3;
+    margin-bottom: 40px;
+  }
+  
+  .resources-section, .tools-section, .links-section {
+    margin-bottom: 30px;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+  }
+  
+  .resources-section h2, .tools-section h2, .links-section h2 {
+    color: #007bff;
+  }
+  
+  .resources-section p, .tools-section p, .links-section p {
+    color: #333;
+    text-align: left;
+    line-height: 1.6;
+  }
+  
+  .links-section ul {
+    list-style: none; /* Removes default list styling */
+    padding: 0;
+  }
+  
+  .links-section li a {
+    color: #007bff;
+    text-decoration: none; /* Removes default underline */
+  }
+  
+  .links-section li a:hover {
+    text-decoration: underline; /* Adds underline on hover */
+  }
+  
+  /* Responsive design */
+  @media (max-width: 768px) {
+    .resources-tools-container {
+      width: 95%;
+    }
+  }
+  

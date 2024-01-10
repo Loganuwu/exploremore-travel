@@ -12,6 +12,7 @@ const Navbar = () => {
         <Link to="/about-us" className="nav-link">About Us</Link>
         <Link to="/privacy" className="nav-link">Privacy</Link>
         <Link to="/destinations" className="nav-link">Destinations Guide</Link>
+        <Link to="/resources" className="nav-link">Resources</Link>
         {/* Add more nav links as needed */}
       </nav>
     );

@@ -10,6 +10,7 @@ import ContactUs from './ContactUs';
 import AboutUs from './AboutUs';
 import Privacy from './Privacy';
 import DestinationsGuide from './DestinationsGuide';
+import TravelResourcesTools from './TravelResourcesTools';
 
 const App = () => {
   const [activeSearchType, setActiveSearchType] = useState('Flights'); // Default to 'Flights'
@@ -41,6 +42,7 @@ const App = () => {
         <Route path="/about-us" element={<AboutUs />} />
         <Route path="/privacy" element={<Privacy />} />
         <Route path="/destinations" element={<DestinationsGuide />} />
+        <Route path="/resources" element={<TravelResourcesTools />} />
         {/* Define other routes as needed */}
       </Routes>
     </Router>
