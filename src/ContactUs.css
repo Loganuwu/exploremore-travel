@@ -7,6 +7,11 @@
   font-weight: 700; /* Apply the font weight of 500 to all text */
 }
 
+.contact-us-container h1 {
+  text-align: center;
+  color: #0056b3;
+}
+
 .contact-us-grid {
   display: grid;
   grid-template-columns: 2fr 2fr 2fr; /* Adjust the ratio as needed */

@@ -8,7 +8,7 @@ import SecurityIcon from '@mui/icons-material/Security';
 const Support = () => {
   return (
     <div className="support-container">
-      <div className="support-column">
+      <div className="support-column">  
         <Link to="/contact-us" className="support-link">
             <div className="contact-header">
               <h2 className="support-title">Contact Us</h2> {/* Contact Us Title */}
@@ -35,7 +35,7 @@ const Support = () => {
               <SecurityIcon /> {/* Security icon for Privacy */}
             </div>
           </Link>
-        <p>Your privacy is paramount at ExploreMore</p>
+          <p>Your information helps us handle your bookings, personalize your travel experience, and communicate important travel updates.</p>
       </div>
     </div>
   );
