@@ -13,5 +13,45 @@
     color: #333333;
   }
   
-  /* Additional responsive styling as needed */
+  /* Assuming your CSS file is App.css or similar */
+/* Navbar link styles */
+.nav-link {
+  position: relative; /* Required for positioning the pseudo-element */
+  color: #000; /* Set the text color */
+  text-decoration: none; /* No underline by default */
+  padding: 0.5rem 0; /* Add some padding */
+  transition: color 0.3s ease; /* Smooth transition for color change */
+}
+
+.nav-link:hover, .nav-link.active {
+  color: #007bff; /* Change color on hover */
+}
+
+/* Underline effect */
+.nav-link::after {
+  content: '';
+  display: block;
+  margin: auto;
+  height: 2px;
+  width: 0%; /* Start with no underline */
+  background: transparent;
+  transition: width 0.5s ease, background-color 0.5s ease;
+}
+
+/* Hover state for the underline */
+.nav-link:hover::after, .nav-link.active::after {
+  width: 100%; /* Full width for the line */
+  background-color: #007bff; /* Or any other color for the underline */
+}
+
+/* Specific styles for non-active links */
+.nav-link:not(.active):hover {
+  color: black; /* Hovered button text color */
+}
+
+.nav-link:not(.active):hover::after {
+  background-color: black; /* Hovered button underline color */
+}
+
+  
   

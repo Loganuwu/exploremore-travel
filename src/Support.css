@@ -27,5 +27,6 @@
     padding: 20px; /* Padding inside boxes */
     border: 1px solid #ccc; /* Border for visual structure */
     text-align: center; /* Center text inside the box */
+    color: red;
   }
   
