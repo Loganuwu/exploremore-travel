@@ -1,6 +1,5 @@
 import React from 'react';
-import 'src\Support.js'; // Make sure to create a Support.css file for styling
-
+import './Support.css';
 const Support = () => {
   return (
     <div className="support-page">
