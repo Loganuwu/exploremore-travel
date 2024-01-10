@@ -1,32 +1,45 @@
-.support-page {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-    padding: 20px;
-  }
-  
-  .support-section {
-    /* Styling for the sections */
-    color: red;
-  }
-  
-  @media (max-width: 768px) {
-    .support-page {
-      grid-template-columns: 1fr; /* Stack columns on smaller screens */
-    }
-  }
-  
+.support-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 20px;
+  width: 80vw; /* Use the viewport width */
+  height: 40vh; /* Use the viewport height for full page height, if desired */
+  box-sizing: border-box;
+  margin: 0 auto;
+  margin-top: 10%;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+}
+
+.support-column {
+  padding: 20px; /* Padding inside each column */
+  border: 1px solid #ccc; /* Border around each column */
+  border-radius: 10px; /* Rounded corners for the border */
+  text-align: center; /* Centers text horizontally */
+  background-color: white;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+}
+
+.support-column a {
+  color: #007bff;
+}
+
+.support-column a:hover {
+  color: red;
+}
+
+.support-title {
+  font-size: 1.5rem; /* Size of the title text */
+  margin-bottom: 20px; /* Space below the title */
+  color: #333; /* Color of the title text */
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+}
+
+@media (max-width: 768px) {
   .support-container {
-    display: flex; /* Use flexbox to create a row of boxes */
-    justify-content: space-around; /* Space the boxes evenly */
+    grid-template-columns: 1fr; /* Stack columns on smaller screens */
   }
-  
-  .support-box {
-    flex: 1; /* Each box will take up equal space */
-    margin: 10px; /* Spacing between boxes */
-    padding: 20px; /* Padding inside boxes */
-    border: 1px solid #ccc; /* Border for visual structure */
-    text-align: center; /* Center text inside the box */
-    color: red;
-  }
-  
+}

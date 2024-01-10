@@ -3,9 +3,12 @@
     top: 0;
     background-color: transparent;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     padding: 10px;
     z-index: 1000;
+    gap: 30px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
   }
   
   .navbar a {
