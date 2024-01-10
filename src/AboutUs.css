@@ -1,0 +1,83 @@
+.about-us-container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .about-us-container h1 {
+    text-align: center;
+    color: #007bff;
+  }
+  
+  .about-us-container p {
+    text-align: justify;
+    margin-bottom: 20px;
+  }
+  
+  .about-us-container h2 {
+    color: #0056b3;
+    margin-top: 20px;
+  }
+  
+  .about-us-container ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .about-us-container li {
+    margin-bottom: 10px;
+    font-weight: 500;
+  }
+  
+  .about-us-container li::before {
+    content: "✓";
+    color: #007bff;
+    display: inline-block; 
+    width: 1em;
+    margin-left: -1em;
+  }
+
+/* ANIMATIONS -------------------------------------------------------------------------------- */
+
+.wave-animation {
+    position: absolute; /* or 'absolute' if you don't want it to be fixed on scroll */
+    bottom: 0;
+    left: 0;
+    width: 100vw; /* Span the full viewport width */
+    height: 50vh; /* Adjust the height as needed */
+    background: transparent;
+    overflow: hidden;
+    z-index: -1; /* Ensure it stays behind other content */
+  }
+  
+  .wave-animation::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    /*Doublethewidthtoensureacontinuousanimation*/height: 100%;
+    background-repeat: no-repeat;
+    background-position: 0% 100%;
+    background-size: 50% 100%;
+    /*AdjustthesizetomatchtheSVG'saspectratio*/background-image: url('./images/wave.svg');
+    /*PathtoyourwaveSVG*/animation: moveWave 20s linear infinite;
+     /* Adjust duration as needed */  
+    -webkit-animation: moveWave 20s linear infinite;
+}
+  
+  @keyframes moveWave {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(100%);
+      /*Movethewavetotheleftbyitsownwidth*/
+      -webkit-transform: translateX(100%);
+      -moz-transform: translateX(100%);
+      -ms-transform: translateX(100%);
+      -o-transform: translateX(100%);
+}
+  }
+  

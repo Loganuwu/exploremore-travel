@@ -71,6 +71,16 @@
   
 }
 
+.contact-header {
+  text-align: center; /* Centers the content (both text and icon) */
+}
+
+.contact-header .MuiSvgIcon-root {
+  font-size: 48px; /* Increase the size of the icon */
+  display: block; /* Makes the icon a block element to allow for centering */
+  margin: 0 auto; /* Centers the icon horizontally */
+}
+
 
 
 @media (max-width: 768px) {
