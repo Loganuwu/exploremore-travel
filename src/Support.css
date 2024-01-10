@@ -30,13 +30,48 @@
   color: red;
 }
 
+.support-column h2 {
+  display: inline-block; /* This makes the h2 element inline-block so it only takes up as much width as necessary */
+  position: relative; /* Relative positioning to contain the absolute pseudo-elements */
+}
+
+.support-column h2::after {
+  content: '';
+  display: block;
+  margin: 0 auto;
+  height: 2px;
+  width: 0%; /* Start with no underline */
+  background-color: #007bff; /* Your desired color for the underline */
+  transition: width 0.3s ease; /* Transition effect for the width property */
+  position: absolute;
+  bottom: -5px; /* Adjust as necessary for spacing from the bottom of the title */
+  left: 50%; /* Start from the center */
+  transform: translateX(-50%); /* Center the element with transform */
+}
+
+.support-column h2:hover::after, 
+.support-column h2:focus::after { /* Add focus for accessibility */
+  width: 100%; /* Full underline on hover/focus */
+  /* The rest of your styles remain the same */
+}
+
 .support-title {
   font-size: 1.5rem; /* Size of the title text */
   margin-bottom: 20px; /* Space below the title */
-  color: #333; /* Color of the title text */
+  color: #007bff; /* Color of the title text */
   font-family: 'Poppins', sans-serif;
   font-weight: 700;
 }
+
+.support-link {
+  text-decoration: none; /* Removes underline */
+  color: #007bff; /* Default text color */
+  position: relative; /* For positioning the pseudo-elements */
+  padding: 5px 0; /* Adjust as needed */
+  
+}
+
+
 
 @media (max-width: 768px) {
   .support-container {

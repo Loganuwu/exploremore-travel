@@ -19,11 +19,16 @@
   /* Assuming your CSS file is App.css or similar */
 /* Navbar link styles */
 .nav-link {
-  position: relative; /* Required for positioning the pseudo-element */
-  color: #000; /* Set the text color */
-  text-decoration: none; /* No underline by default */
-  padding: 0.5rem 0; /* Add some padding */
-  transition: color 0.3s ease; /* Smooth transition for color change */
+  position: relative;
+  /*Requiredforpositioningthepseudo-element*/color: #000;
+  /*Setthetextcolor*/text-decoration: none;
+  /*Nounderlinebydefault*/padding: 0.5rem 0;
+  /*Addsomepadding*/transition: color 0.3s ease;
+   /* Smooth transition for color change */
+  -webkit-transition: color 0.3s ease;
+  -moz-transition: color 0.3s ease;
+  -ms-transition: color 0.3s ease;
+  -o-transition: color 0.3s ease;
 }
 
 .nav-link:hover, .nav-link.active {
