@@ -47,6 +47,14 @@
     border-radius: 5px; /* Optional: for rounded corners */
     margin-right: 20px;
   }
+
+  .barcode-image {
+    position: absolute;
+    bottom: 10px; /* Position from the bottom */
+    right: 10px; /* Position from the right */
+    width: 80px; /* Adjust as necessary */
+    height: auto;
+  }
   
   .remove-item-icon {
     width: 30px;
