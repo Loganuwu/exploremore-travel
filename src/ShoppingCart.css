@@ -27,6 +27,42 @@
     margin: 0;
     text-align: left;
   }
+
+  .cart-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 20px;
+    position: relative;
+  }
+
+  .cart-item-image {
+    width: 180px; /* Set a fixed width */
+    height: 180px; /* Set a fixed height */
+    object-fit: cover; /* This ensures the image covers the area without stretching */
+    border-radius: 5px; /* Optional: for rounded corners */
+    margin-right: 20px;
+  }
+  
+  .remove-item-icon {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    position: absolute;
+    right: 15px;
+  }
+  
+  .cart-total {
+    text-align: right;
+    font-size: 1.2rem;
+    margin-top: 20px;
+  }
+
+  /* Responsive Styles */
   
   @media (max-width: 768px) {
     .shopping-cart-container {
@@ -41,5 +77,18 @@
     .boarding-pass-image {
       margin-bottom: 10px;
     }
-  }
-  
+    .cart-item {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    
+      .remove-item-icon {
+        position: static;
+        margin-left: auto;
+        margin-top: 10px;
+      }
+    
+      .cart-total {
+        text-align: center;
+      }
+    }
