@@ -11,6 +11,8 @@ import AboutUs from './AboutUs';
 import Privacy from './Privacy';
 import DestinationsGuide from './DestinationsGuide';
 import TravelResourcesTools from './TravelResourcesTools';
+import CustomerServiceChat from './CustomerServiceChat';
+
 
 const App = () => {
   const [activeSearchType, setActiveSearchType] = useState('Flights'); // Default to 'Flights'
@@ -18,6 +20,7 @@ const App = () => {
   return (
     <Router>
       <Navbar />
+      <CustomerServiceChat />
       <Routes>
         <Route path="/" element={
           <>
