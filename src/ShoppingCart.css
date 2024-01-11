@@ -1,0 +1,45 @@
+.shopping-cart-container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    max-width: 800px;
+  }
+  
+  .boarding-pass {
+    display: flex;
+    align-items: center;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 20px;
+  }
+  
+  .boarding-pass-image {
+    max-width: 150px; /* Adjust as needed */
+    height: auto;
+    margin-right: 20px;
+  }
+  
+  .boarding-pass-info h3, .boarding-pass-info p {
+    margin: 0;
+    text-align: left;
+  }
+  
+  @media (max-width: 768px) {
+    .shopping-cart-container {
+      width: 95%;
+    }
+  
+    .boarding-pass {
+      flex-direction: column;
+      align-items: start;
+    }
+  
+    .boarding-pass-image {
+      margin-bottom: 10px;
+    }
+  }
+  

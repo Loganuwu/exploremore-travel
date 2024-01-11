@@ -14,6 +14,7 @@ const Navbar = () => {
         <Link to="/destinations" className="nav-link">Destinations Guide</Link>
         <Link to="/resources" className="nav-link">Resources</Link>
         <Link to="/orders" className="nav-link">Order Status</Link>
+        <Link to="/shopping-cart" className="nav-link">Shopping Cart</Link>
         {/* Add more nav links as needed */}
       </nav>
     );

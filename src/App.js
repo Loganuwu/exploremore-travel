@@ -13,7 +13,7 @@ import DestinationsGuide from './DestinationsGuide';
 import TravelResourcesTools from './TravelResourcesTools';
 import CustomerServiceChat from './CustomerServiceChat';
 import OrderStatus from './OrderStatus';
-
+import ShoppingCart from './ShoppingCart';
 
 
 const App = () => {
@@ -49,6 +49,7 @@ const App = () => {
         <Route path="/destinations" element={<DestinationsGuide />} />
         <Route path="/resources" element={<TravelResourcesTools />} />
         <Route path="/orders" element={<OrderStatus />} />
+        <Route path="/shopping-cart" element={<ShoppingCart />} />
         {/* Define other routes as needed */}
       </Routes>
     </Router>
