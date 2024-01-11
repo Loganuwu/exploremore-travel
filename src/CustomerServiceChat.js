@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './CustomerServiceChat.css'; // Make sure to create this CSS file
+import './CustomerServiceChat.css'; 
 
 const CustomerServiceChat = () => {
   const [isChatOpen, setIsChatOpen] = useState(false);

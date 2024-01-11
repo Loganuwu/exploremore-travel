@@ -1,13 +1,13 @@
 .chat-container {
     position: fixed;
-    bottom: 20px;
+    bottom: 30px;
     right: 20px;
     z-index: 1000;
   }
   
   .chat-toggle {
     padding: 10px 20px;
-    background-color: #007bff;
+    background-image: linear-gradient(to right, #6dd5ed, #2193b0);
     color: white;
     border: none;
     border-radius: 5px;
@@ -20,7 +20,10 @@
     border-radius: 5px;
     padding: 20px;
     box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
-    width: 300px;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers children horizontally */
   }
   
   .chat-popup p {
@@ -41,14 +44,18 @@
   
   .chat-popup button {
     padding: 10px 20px;
-    background-color: #007bff;
+    background-image: linear-gradient(to right, #6dd5ed, #2193b0);
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    margin-top: 10px;
   }
   
   .close-chat {
     background-color: #f44336;
+    margin-left: 10px;
+    justify-content: center;
+    align-items: center;
   }
   
