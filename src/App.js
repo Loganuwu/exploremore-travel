@@ -48,6 +48,7 @@ const App = () => {
         <Route path="/privacy" element={<Privacy />} />
         <Route path="/destinations" element={<DestinationsGuide />} />
         <Route path="/resources" element={<TravelResourcesTools />} />
+        <Route path="/orders" element={<OrderStatus />} />
         {/* Define other routes as needed */}
       </Routes>
     </Router>

@@ -4,6 +4,7 @@
     padding: 20px;
     font-family: 'Poppins', sans-serif;
     text-align: center;
+    max-width: 600px; /* Set a max-width for larger screens */
   }
   
   .order-status-container h1 {
@@ -33,4 +34,41 @@
     border: 1px solid #ddd;
     border-radius: 5px;
   }
+
+  .orders-display {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+  }
   
+  .order-item {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .order-image {
+    max-width: 100%; /* Ensure image is responsive and fits within its container */
+    height: auto; /* Maintain aspect ratio */
+    max-height: 190px; /* Limit the image height */
+    border: 1px solid #ddd;
+    border-radius: 10px;
+  }
+
+  /* Responsive design for smaller screens */
+  @media (max-width: 768px) {
+    .order-status-container {
+      width: 95%;
+    }
+  
+    .orders-display {
+      flex-direction: column;
+    }
+  
+    .order-item {
+      margin-bottom: 10px;
+    }
+  }
