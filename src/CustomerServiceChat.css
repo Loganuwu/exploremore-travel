@@ -59,3 +59,11 @@
     align-items: center;
   }
   
+  .customer-service-icon {
+    width: 190px; /* Adjust size as needed */
+    height: 190px; /* Adjust size as needed */
+    margin-right: 10px; /* Space between the icon and the chat content */
+  }
+  .chat-content {
+    flex-grow: 1;
+  }
