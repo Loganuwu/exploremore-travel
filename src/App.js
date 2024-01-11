@@ -12,6 +12,8 @@ import Privacy from './Privacy';
 import DestinationsGuide from './DestinationsGuide';
 import TravelResourcesTools from './TravelResourcesTools';
 import CustomerServiceChat from './CustomerServiceChat';
+import OrderStatus from './OrderStatus';
+
 
 
 const App = () => {
