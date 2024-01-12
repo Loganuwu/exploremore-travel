@@ -25,7 +25,7 @@ const App = () => {
       <Navbar />
       <CustomerServiceChat />
       <Routes>
-        <Route path="/" element={
+        <Route path="/exploremore-travel/" element={
           <>
             <header className="app-header">
               <h1 className="website-title">ExploreMore</h1>
