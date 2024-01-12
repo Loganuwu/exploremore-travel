@@ -1,29 +1,29 @@
 {
   "files": {
-    "main.css": "/static/css/main.ee654556.css",
-    "main.js": "/static/js/main.8b4bb258.js",
-    "static/js/787.2eb94407.chunk.js": "/static/js/787.2eb94407.chunk.js",
-    "static/media/paris.webp": "/static/media/paris.d4e40ce652df4bac8eeb.webp",
-    "static/media/itinerary.png": "/static/media/itinerary.3ee61459642d7e618c5c.png",
-    "static/media/tokyo.jpg": "/static/media/tokyo.a5738b125b31c68a3ad9.jpg",
-    "static/media/Utah-mountains.jpg": "/static/media/Utah-mountains.6de4e1dcf34825da9737.jpg",
-    "static/media/sedonasnow.jpg": "/static/media/sedonasnow.8208577e3e1666b77c0f.jpg",
-    "static/media/chatperson.svg": "/static/media/chatperson.48ad152bdc27700d11ccda9481502865.svg",
-    "static/media/barcode.svg": "/static/media/barcode.38572d69815d21b9a39edee6f21907ab.svg",
-    "static/media/contact.svg": "/static/media/contact.456965a905c222da8d538e292776d25d.svg",
-    "static/media/wave.svg": "/static/media/wave.6c89e316cac8a63077b7.svg",
-    "static/media/phone.svg": "/static/media/phone.09747b1e8bcdcb22cc989fbfcd8eeca4.svg",
-    "static/media/email.svg": "/static/media/email.f7ead3da3d11a1ca84ba61d03199a9cf.svg",
-    "static/media/order.svg": "/static/media/order.b39c8f40f6372125b33ba8a676e282ab.svg",
-    "static/media/shoppingcart.svg": "/static/media/shoppingcart.09d1d9e27cd62c68bf401bc8cb9fc3b2.svg",
-    "index.html": "/index.html",
-    "static/media/trashcan.svg": "/static/media/trashcan.a4d452793f9cabb4d420cdee7d029b85.svg",
-    "main.ee654556.css.map": "/static/css/main.ee654556.css.map",
-    "main.8b4bb258.js.map": "/static/js/main.8b4bb258.js.map",
-    "787.2eb94407.chunk.js.map": "/static/js/787.2eb94407.chunk.js.map"
+    "main.css": "/exploremore-travel/static/css/main.ec4d92b5.css",
+    "main.js": "/exploremore-travel/static/js/main.3e9ced8f.js",
+    "static/js/787.2eb94407.chunk.js": "/exploremore-travel/static/js/787.2eb94407.chunk.js",
+    "static/media/paris.webp": "/exploremore-travel/static/media/paris.d4e40ce652df4bac8eeb.webp",
+    "static/media/itinerary.png": "/exploremore-travel/static/media/itinerary.3ee61459642d7e618c5c.png",
+    "static/media/tokyo.jpg": "/exploremore-travel/static/media/tokyo.a5738b125b31c68a3ad9.jpg",
+    "static/media/Utah-mountains.jpg": "/exploremore-travel/static/media/Utah-mountains.6de4e1dcf34825da9737.jpg",
+    "static/media/sedonasnow.jpg": "/exploremore-travel/static/media/sedonasnow.8208577e3e1666b77c0f.jpg",
+    "static/media/chatperson.svg": "/exploremore-travel/static/media/chatperson.48ad152bdc27700d11ccda9481502865.svg",
+    "static/media/barcode.svg": "/exploremore-travel/static/media/barcode.38572d69815d21b9a39edee6f21907ab.svg",
+    "static/media/contact.svg": "/exploremore-travel/static/media/contact.456965a905c222da8d538e292776d25d.svg",
+    "static/media/wave.svg": "/exploremore-travel/static/media/wave.6c89e316cac8a63077b7.svg",
+    "static/media/phone.svg": "/exploremore-travel/static/media/phone.09747b1e8bcdcb22cc989fbfcd8eeca4.svg",
+    "static/media/email.svg": "/exploremore-travel/static/media/email.f7ead3da3d11a1ca84ba61d03199a9cf.svg",
+    "static/media/order.svg": "/exploremore-travel/static/media/order.b39c8f40f6372125b33ba8a676e282ab.svg",
+    "static/media/shoppingcart.svg": "/exploremore-travel/static/media/shoppingcart.09d1d9e27cd62c68bf401bc8cb9fc3b2.svg",
+    "index.html": "/exploremore-travel/index.html",
+    "static/media/trashcan.svg": "/exploremore-travel/static/media/trashcan.a4d452793f9cabb4d420cdee7d029b85.svg",
+    "main.ec4d92b5.css.map": "/exploremore-travel/static/css/main.ec4d92b5.css.map",
+    "main.3e9ced8f.js.map": "/exploremore-travel/static/js/main.3e9ced8f.js.map",
+    "787.2eb94407.chunk.js.map": "/exploremore-travel/static/js/787.2eb94407.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.ee654556.css",
-    "static/js/main.8b4bb258.js"
+    "static/css/main.ec4d92b5.css",
+    "static/js/main.3e9ced8f.js"
   ]
 }
