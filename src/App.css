@@ -3,7 +3,7 @@
 }
 
 .App-logo {
-  height: 40vmin;
+  height: 20vmin;
   pointer-events: none;
 }
 
@@ -20,21 +20,18 @@
 
 .website-title {
   margin: 0;
-  font-size: 54px; /* Adjust the size as needed */
+  font-size: calc(12px + 4vmin); /* Responsive font size */
   text-align: center;
-  font-family: 'Poppins', sans-serif;
   font-weight: 400;
 }
 
 
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
   color: white;
 }
 
@@ -70,7 +67,7 @@ body {
 /* Style for the main container */
 .main-container {
   position: relative;
-  width: 80%; /* Or any width you prefer */
+  width: 95%; /* Or any width you prefer */
   max-width: 1200px; /* Maximum width */
   margin: auto; /* Center horizontally */
   padding: 20px;
@@ -83,19 +80,19 @@ body {
 
 @media (max-width: 600px) {
   .main-container {
-      width: 95%; /* Increase width on smaller screens */
-      padding: 10px; /* Reduce padding on smaller screens */
+    width: 95%; /* Increase width on smaller screens */
   }
   .search-container {
     padding: 10px;
     margin: 10px 0;
-}
-.flight-search-form {
-  flex-direction: column;
-}
-.input-column {
-  margin: 10px 0; /* Adjust margin for vertical layout */
-}
+  }
+  .flight-search-form,
+  .stay-search-form {
+    flex-direction: column; /* Stack elements vertically */
+  }
+  .input-column {
+    margin: 10px 0; /* Adjust margin for vertical layout */
+  }
 }
 
 h1 {
