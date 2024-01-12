@@ -11,7 +11,7 @@ import { useNavigate } from 'react-router-dom';
 const ShoppingCart = () => {
     const navigate = useNavigate();
     const handleCheckout = () => {
-        navigate('/exploremore-travel/checkout'); // This will navigate to the checkout page when clicked
+        navigate('/checkout'); // This will navigate to the checkout page when clicked
       };
     const items = [
       {
