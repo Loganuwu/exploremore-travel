@@ -50,6 +50,8 @@ const App = () => {
         <Route path="/resources" element={<TravelResourcesTools />} />
         <Route path="/orders" element={<OrderStatus />} />
         <Route path="/shopping-cart" element={<ShoppingCart />} />
+        <Route path="/checkout" element={<Checkout />} />
+
         {/* Define other routes as needed */}
       </Routes>
     </Router>

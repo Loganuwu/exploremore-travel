@@ -4,9 +4,15 @@ import boardingPassImage1 from './images/paris.webp';
 import boardingPassImage2 from './images/tokyo.jpg';
 import trashCanIcon from './images/trashcan.svg'; //
 import barcodeImage from './images/barcode.svg'; 
+import { useNavigate } from 'react-router-dom';
+
 
 
 const ShoppingCart = () => {
+    const navigate = useNavigate();
+    const handleCheckout = () => {
+        navigate('/checkout'); // This will navigate to the checkout page when clicked
+      };
     const items = [
       {
         id: 1,
