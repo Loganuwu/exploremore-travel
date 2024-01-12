@@ -7,8 +7,9 @@ const Checkout = () => {
 
     const [orderNumber, setOrderNumber] = useState('');
 
-    const handlePayNow = () => {
+    const handlePayNow = (event) => {
         // Generate a random order number: 2 letters followed by 4 digits
+        event.preventDefault(); // Prevent form submission
         const randomOrderNumber = 
           Math.random().toString(36).substring(2, 4).toUpperCase() + 
           Math.floor(Math.random() * 10000).toString().padStart(4, '0');
@@ -98,7 +99,6 @@ const Checkout = () => {
             </div>
             <div className="form-button">
                 <button className="pay-now-button" onClick={handlePayNow}>Pay Now</button>
-                {orderNumber && <p>Order Number: {orderNumber}</p>}
             </div>
         </form>
         </div>
@@ -121,6 +121,7 @@ const Checkout = () => {
         ))}
         <div className="grand-total">
           <h3>Grand Total: ${total}</h3>
+          {orderNumber && <p>Order Number: {orderNumber}</p>}
         </div>
       </div>
     </div>
