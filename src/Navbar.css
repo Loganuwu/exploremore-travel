@@ -31,6 +31,20 @@
   -o-transition: color 0.3s ease;
 }
 
+.nav-link img {
+  width: 24px; /* Adjust the size as needed */
+  height: auto;
+  /* Add any additional styling if needed */
+}
+.order img {
+  width: 44px; /* Adjust the size as needed */
+  height: auto;
+  position: absolute; /* Position the image absolutely within its relative parent */
+  top: 0px; /* Move the image up by 10 pixels */
+  left: 50%; /* Center horizontally in the parent element */
+  transform: translateX(-50%); /* Ensure it's centered after moving it */
+}
+
 .nav-link:hover, .nav-link.active {
   color: #007bff; /* Change color on hover */
 }

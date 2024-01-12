@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link, useNavigate } from 'react-router-dom'; // useNavigate replaces useHistory
 import './Navbar.css';
+import ShoppingCartIcon from './images/shoppingcart.svg'; // Update the path as necessary
+import OrderIcon from './images/order.svg'; // Update the path as necessary
 import { useHistory } from 'react-router-dom';
 
 const Navbar = () => {
@@ -13,8 +15,12 @@ const Navbar = () => {
         <Link to="/privacy" className="nav-link">Privacy</Link>
         <Link to="/destinations" className="nav-link">Destinations Guide</Link>
         <Link to="/resources" className="nav-link">Resources</Link>
-        <Link to="/orders" className="nav-link">Order Status</Link>
-        <Link to="/shopping-cart" className="nav-link">Shopping Cart</Link>
+        <a href="/orders" className="nav-link order">
+        <img src={OrderIcon} alt="Order" />
+      </a>
+        <a href="/shopping-cart" className="nav-link">
+        <img src={ShoppingCartIcon} alt="Shopping Cart" />
+      </a>
         {/* Add more nav links as needed */}
       </nav>
     );
