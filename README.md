@@ -33,7 +33,7 @@ This project was undertaken to provide users with a one-stop solution for all th
 
 To get started with the project on your local machine, follow these steps:
 
-1. Clone this repository: `git clone https://github.com/YourUsername/exploremore-travel.git`
+1. Clone this repository: `git clone https://github.com/Loganuwu/exploremore-travel.git`
 2. Navigate to the project directory: `cd exploremore-travel`
 3. Install dependencies: `npm install`
 4. Start the development server: `npm start`
