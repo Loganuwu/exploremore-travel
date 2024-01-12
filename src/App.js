@@ -21,7 +21,7 @@ const App = () => {
   const [activeSearchType, setActiveSearchType] = useState('Flights'); // Default to 'Flights'
 
   return (
-    <Router>
+    <Router basename="/exploremore-travel">
       <Navbar />
       <CustomerServiceChat />
       <Routes>
