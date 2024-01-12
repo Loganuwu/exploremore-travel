@@ -15,12 +15,12 @@ const Navbar = () => {
         <Link to="/privacy" className="nav-link">Privacy</Link>
         <Link to="/destinations" className="nav-link">Destinations Guide</Link>
         <Link to="/resources" className="nav-link">Resources</Link>
-        <a href="/exploremore-travel/orders" className="nav-link order">
+        <Link to="/exploremore-travel/orders" className="nav-link order">
         <img src={OrderIcon} alt="Order" />
-      </a>
-        <a href="/exploremore-travel/shopping-cart" className="nav-link">
+      </Link>
+      <Link to="/exploremore-travel/shopping-cart" className="nav-link">
         <img src={ShoppingCartIcon} alt="Shopping Cart" />
-      </a>
+      </Link>
         {/* Add more nav links as needed */}
       </nav>
     );
