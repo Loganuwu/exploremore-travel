@@ -101,3 +101,44 @@
 .contact-info {
   flex-grow: 1; /* This will make the columns grow to fill the space */
 }
+
+@media (max-width: 768px) {
+  .contact-us-grid {
+    display: grid;
+    grid-template-columns: 1fr; /* Stack columns vertically on small screens */
+    gap: 20px;
+  }
+
+  .contact-info.email, .contact-info.phone {
+    text-align: center; /* Center-align text for smaller screens */
+  }
+
+  .contact-form input[type="text"],
+  .contact-form input[type="email"],
+  .contact-form textarea {
+    width: 90%; /* Slightly reduce width for padding */
+  }
+
+  .contact-form button {
+    width: 90%; /* Match input width */
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-us-container {
+    width: 95%; /* Increase width to use more screen space */
+    padding: 15px; /* Adjust padding */
+  }
+
+  .contact-icon {
+    height: 80px; /* Slightly smaller icons */
+    width: 80px;
+  }
+
+  .contact-form input[type="text"],
+  .contact-form input[type="email"],
+  .contact-form textarea,
+  .contact-form button {
+    width: 100%; /* Full width for very small screens */
+  }
+}
