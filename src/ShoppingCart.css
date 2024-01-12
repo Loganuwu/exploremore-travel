@@ -1,10 +1,15 @@
 .shopping-cart-container {
-    width: 80%;
-    margin: 0 auto;
+    max-width: 900px; /* or whatever maximum width you prefer */
+    margin: 20px auto; /* 'auto' on the left and right margins will center the container */
     padding: 20px;
     font-family: 'Poppins', sans-serif;
     text-align: center;
-    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* This centers the children horizontally */
+    justify-content: flex-start; /* Aligns children to the start of the flex container */
+    height: auto; /* Change from 100vh to 'auto' to contain all content without overflow */
+    overflow: hidden; /* Hides overflow, but you might not need this if height is auto */
   }
   
   .boarding-pass {
@@ -13,15 +18,16 @@
     background-color: #f9f9f9;
     border: 1px solid #ddd;
     border-radius: 10px;
-    padding: 15px;
+    padding: 10px;
     margin-bottom: 20px;
   }
   
   .boarding-pass-image {
-    max-width: 150px; /* Adjust as needed */
+    max-width: 150px; /* Keep the width as is */
+    max-height: 120px; /* Reduce the height */
     height: auto;
     margin-right: 20px;
-  }
+}
   
   .boarding-pass-info h3, .boarding-pass-info p {
     margin: 0;
@@ -30,14 +36,27 @@
 
   .cart-item {
     display: flex;
-    align-items: center;
     justify-content: space-between;
+    align-items: center;
     background-color: #f9f9f9;
     border: 1px solid #ddd;
     border-radius: 10px;
-    padding: 15px;
+    padding: 10px;
     margin-bottom: 20px;
-    position: relative;
+    width: 100%;
+    height: 300px;
+    box-sizing: border-box;
+    overflow: hidden;
+  }
+
+  .cart-item-info {
+    /* If the text is still not fitting, consider reducing font size or adjusting margins/padding */
+    font-size: 0.9em; /* Adjust font size as needed */
+    padding: 5px; /* Adjust padding to make more space */
+    overflow: auto; /* Allow scrolling within the item info if necessary */
+  }
+  .cart-item:first-child {
+    margin-top: 0; /* Remove top margin of the first item */
   }
 
   .cart-item-image {
@@ -46,57 +65,104 @@
     object-fit: cover; /* This ensures the image covers the area without stretching */
     border-radius: 5px; /* Optional: for rounded corners */
     margin-right: 20px;
+    
   }
 
   .barcode-image {
-    position: absolute;
-    bottom: 10px; /* Position from the bottom */
-    right: 10px; /* Position from the right */
-    width: 80px; /* Adjust as necessary */
-    height: auto;
+    width: 120px; /* Set a fixed width */
+    height: auto; /* Maintain the aspect ratio */
+    margin-left: 70px; /* Add some space between the barcode and the info */
+    align-self: center; /* Center it vertically in the flex container */
+}
+.boarding-pass-info h3, .boarding-pass-info p {
+    margin: 2px 0; /* Smaller gaps between info */
   }
   
-  .remove-item-icon {
-    width: 30px;
-    height: 30px;
-    cursor: pointer;
-    position: absolute;
-    right: 15px;
+  .cart-item-image, .boarding-pass-image {
+    max-height: 100px; /* Adjust the height */
   }
+
+  .cart-item, .boarding-pass {
+    padding: 8px; /* Reduced padding */
+    margin-bottom: 10px; /* Reduced margin */
+  }
+.remove-item-icon {
+    width: 25px;
+    cursor: pointer;
+    align-self: center; /* Align to center of the container */
+    margin-left: auto; /* Push it to the right */
+    margin-right: -10px; /* Adjust to prevent being cut off */
+}
+
+.remove-item-icon:hover {
+    fill: red; /* Change the color to red on hover */
+    color: red; /* Change the SVG color on hover */
+    background-color: red;
+}
   
   .cart-total {
-    text-align: right;
-    font-size: 1.2rem;
-    margin-top: 20px;
+    /* Position total at the bottom */
+    position: absolute;
+    bottom: 40px;
+    width: 100%;
+    text-align: center;
   }
+
+  .cart-summary {
+    position: fixed; /* Fixed at the bottom */
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: transparent; /* Or any color that fits the design */
+    padding: 10px;
+  }
+
+  .checkout-button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px; /* Add space above the button */
+    width: auto; /* Adjust width as necessary */
+}
 
   /* Responsive Styles */
   
   @media (max-width: 768px) {
     .shopping-cart-container {
-      width: 95%;
+      width: 95%; /* Slightly reduce width on mobile for padding */
+      margin: auto; /* Ensure container is centered */
     }
   
-    .boarding-pass {
-      flex-direction: column;
-      align-items: start;
+    .cart-item, .boarding-pass {
+      flex-direction: column; /* Stack children vertically on small screens */
+      align-items: center; /* Center items */
+      margin-bottom: 10px; /* Keep margins tight */
+      padding: 8px; /* Reduced padding */
     }
   
-    .boarding-pass-image {
-      margin-bottom: 10px;
+    .cart-item-image, .boarding-pass-image {
+      max-width: 90px; /* Smaller images on mobile */
+      max-height: 90px; /* Smaller images on mobile */
     }
-    .cart-item {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-    
-      .remove-item-icon {
-        position: static;
-        margin-left: auto;
-        margin-top: 10px;
-      }
-    
-      .cart-total {
-        text-align: center;
-      }
+  
+    .cart-item-info {
+      font-size: 0.8em; /* Smaller text on mobile */
+      margin: 2px 0; /* Reduce space between text */
     }
+  
+
+  
+    .cart-summary {
+      position: static; /* Ensure it's in normal document flow on mobile */
+      padding: 10px 0; /* Padding above and below the summary */
+    }
+  
+    .checkout-button {
+      /* Full-width button on mobile */
+      width: 100%;
+      padding: 12px 20px; /* Larger touch area for better accessibility */
+    }
+  }
