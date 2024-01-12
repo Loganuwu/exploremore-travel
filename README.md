@@ -1,7 +1,7 @@
 # ExploreMore Travel Website
 
 Welcome to the ExploreMore Travel website repository! This web application is designed to provide users with a seamless experience for exploring travel options, booking flights, stays, and attractions, and accessing travel resources and tools.
-Live Deployment Link: https://loganuwu.github.io/exploremore-travel/home
+Live Deployment Link: https://loganuwu.github.io/exploremore-travel/
 
 ## Table of Contents
 - [About the Project](#about-the-project)
@@ -41,7 +41,7 @@ To get started with the project on your local machine, follow these steps:
 ## Usage
 
 Once the development server is running, open your web browser and access the application at `http://localhost:3000`.
-Or us the live deployment link to mess around with the website on your own at https://loganuwu.github.io/exploremore-travel/home
+Or us the live deployment link to mess around with the website on your own at https://loganuwu.github.io/exploremore-travel/
 
 ## Built With
 
