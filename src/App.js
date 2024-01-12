@@ -14,6 +14,7 @@ import TravelResourcesTools from './TravelResourcesTools';
 import CustomerServiceChat from './CustomerServiceChat';
 import OrderStatus from './OrderStatus';
 import ShoppingCart from './ShoppingCart';
+import Checkout from './Checkout';
 
 
 const App = () => {

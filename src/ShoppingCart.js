@@ -75,7 +75,7 @@ const ShoppingCart = () => {
             <div className="cart-total">
               <h2>Total: ${totalPrice}</h2>
             </div>
-            <button className="checkout-button">Checkout</button>
+            <button className="checkout-button" onClick={handleCheckout}>Checkout</button>
           </div>
         </div>
       );

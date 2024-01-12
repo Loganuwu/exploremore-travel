@@ -1,4 +1,7 @@
 import React from 'react';
+import './Checkout.css';
+import { useNavigate } from 'react-router-dom';
+
 
 const Checkout = () => {
   return (
