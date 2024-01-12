@@ -49,8 +49,8 @@ const App = () => {
         <Route path="/privacy" element={<Privacy />} />
         <Route path="/destinations" element={<DestinationsGuide />} />
         <Route path="/resources" element={<TravelResourcesTools />} />
-        <Route path="/orders" element={<OrderStatus />} />
-        <Route path="/shopping-cart" element={<ShoppingCart />} />
+        <Route path="/exploremore-travel/orders" element={<OrderStatus />} />
+        <Route path="/exploremore-travel/shopping-cart" element={<ShoppingCart />} />
         <Route path="/checkout" element={<Checkout />} />
 
         {/* Define other routes as needed */}
