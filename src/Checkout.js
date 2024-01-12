@@ -68,64 +68,57 @@ const [paymentInfo, setPaymentInfo] = useState({
       )}
 
       {step === 2 && (
-  <form className="payment-form" onSubmit={handlePaymentSubmit}>
-    <div className="form-row">
-      <input
-        type="email"
-        name="email"
-        placeholder="Email (required)"
-        value={paymentInfo.email}
-        onChange={handleInputChange}
-        required
-      />
-    </div>
-    <div className="form-row">
-      <input
-        type="text"
-        name="firstName"
-        placeholder="First Name (required)"
-        value={paymentInfo.firstName}
-        onChange={handleInputChange}
-        required
-      />
-      <input
-        type="text"
-        name="lastName"
-        placeholder="Last Name (required)"
-        value={paymentInfo.lastName}
-        onChange={handleInputChange}
-        required
-      />
-    </div>
-    <div className="form-row">
-      <input
-        type="text"
-        name="cardNumber"
-        placeholder="Card Number (required)"
-        value={paymentInfo.cardNumber}
-        onChange={handleInputChange}
-        required
-        pattern="\d{16}"
-        maxLength="16"
-      />
-    </div>
-    <div className="form-row">
-      <input
-        type="text"
-        name="expiryDate"
-        placeholder="Expiration Date (required)"
-        value={paymentInfo.expiryDate}
-        onChange={handleInputChange}
-        required
-      />
-      <input
-        type="text"
-        name="postalCode"
-        placeholder="Postal Code (required)"
-        value={paymentInfo.postalCode}
-        onChange={handleInputChange}
-        required
-      />
+      <form className="payment-form" onSubmit={handlePaymentSubmit}>
+        {/* ... your existing payment fields ... */}
+
+        <div className="form-row">
+          <input
+            type="password"
+            name="cardNumber"
+            placeholder="Card Number (required)"
+            value={paymentInfo.cardNumber}
+            onChange={handleInputChange}
+            required
+            pattern="\d{0,12}\d{4}" // Allows for the last 4 digits to be shown
+            maxLength="16"
+          />
+        </div>
+
+        <div className="form-row">
+          <input
+            type="text"
+            name="expiryMonth"
+            placeholder="MM"
+            value={paymentInfo.expiryMonth}
+            onChange={handleInputChange}
+            required
+            pattern="\d{2}"
+            maxLength="2"
+          />
+          <span>/</span>
+          <input
+            type="text"
+            name="expiryYear"
+            placeholder="YYYY"
+            value={paymentInfo.expiryYear}
+            onChange={handleInputChange}
+            required
+            pattern="\d{4}"
+            maxLength="4"
+          />
+        </div>
+
+        <div className="form-row">
+          <input
+            type="text"
+            name="postalCode"
+            placeholder="Postal Code (required)"
+            value={paymentInfo.postalCode}
+            onChange={handleInputChange}
+            required
+            pattern="\d{5}"
+            maxLength="5"
+          />
     </div>
     <div className="form-row">
       <input
