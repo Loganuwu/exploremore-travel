@@ -43,15 +43,15 @@ const App = () => {
             </div>
           </>
         } />
-        <Route path="/support" element={<Support />} />
-        <Route path="/contact-us" element={<ContactUs />} />
-        <Route path="/about-us" element={<AboutUs />} />
-        <Route path="/privacy" element={<Privacy />} />
-        <Route path="/destinations" element={<DestinationsGuide />} />
-        <Route path="/resources" element={<TravelResourcesTools />} />
-        <Route path="/orders" element={<OrderStatus />} />
-        <Route path="/shopping-cart" element={<ShoppingCart />} />
-        <Route path="/checkout" element={<Checkout />} />
+        <Route path="/exploremore-travel/support" element={<Support />} />
+        <Route path="/exploremore-travel/contact-us" element={<ContactUs />} />
+        <Route path="/exploremore-travel/about-us" element={<AboutUs />} />
+        <Route path="/exploremore-travel/privacy" element={<Privacy />} />
+        <Route path="/exploremore-travel/destinations" element={<DestinationsGuide />} />
+        <Route path="/exploremore-travel/resources" element={<TravelResourcesTools />} />
+        <Route path="/exploremore-travel/orders" element={<OrderStatus />} />
+        <Route path="/exploremore-travel/shopping-cart" element={<ShoppingCart />} />
+        <Route path="/exploremore-travel/checkout" element={<Checkout />} />
 
         {/* Define other routes as needed */}
       </Routes>
