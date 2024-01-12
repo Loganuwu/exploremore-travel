@@ -9,12 +9,12 @@ const Navbar = () => {
     return (
       <nav className="navbar">
         <Link to="/" className="nav-link">Home</Link>
-        <Link to="/support" className="nav-link">Support</Link>
-        <Link to="/contact-us" className="nav-link">Contact Us</Link>
-        <Link to="/about-us" className="nav-link">About Us</Link>
-        <Link to="/privacy" className="nav-link">Privacy</Link>
-        <Link to="/destinations" className="nav-link">Destinations Guide</Link>
-        <Link to="/resources" className="nav-link">Resources</Link>
+        <Link to="/exploremore-travel/support" className="nav-link">Support</Link>
+        <Link to="/exploremore-travel/contact-us" className="nav-link">Contact Us</Link>
+        <Link to="/exploremore-travel/about-us" className="nav-link">About Us</Link>
+        <Link to="/exploremore-travel/privacy" className="nav-link">Privacy</Link>
+        <Link to="/exploremore-travel/destinations" className="nav-link">Destinations Guide</Link>
+        <Link to="/exploremore-travel/resources" className="nav-link">Resources</Link>
         <Link to="/exploremore-travel/orders" className="nav-link order">
         <img src={OrderIcon} alt="Order" />
       </Link>
