@@ -127,6 +127,27 @@
     border-radius: 4px;
     cursor: pointer;
   }
+
+  .flight-review {
+    border: 1px solid #ccc;
+    padding: 8px; /* Reduced padding */
+    margin-bottom: 10px; /* Smaller gap between flight reviews */
+    font-size: 0.9rem; /* Smaller font size */
+  }
+  .flight-review p {
+    margin: 4px 0; /* Reduced vertical gap between text items */
+  }
+  
+  .flight-image {
+    width: 80px; /* Adjust the size of the image as needed */
+    height: auto;
+    margin-right: 10px;
+  }
+  
+  .grand-total {
+    font-weight: bold;
+    margin-top: 20px;
+  }
   
   
   /* Responsive adjustments for smaller screens */
