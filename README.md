@@ -41,6 +41,7 @@ To get started with the project on your local machine, follow these steps:
 ## Usage
 
 Once the development server is running, open your web browser and access the application at `http://localhost:3000`.
+Or us the live deployment link to mess around with the website on your own at https://loganuwu.github.io/exploremore-travel/home
 
 ## Built With
 
