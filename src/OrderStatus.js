@@ -44,7 +44,7 @@ const OrderStatus = () => {
         <div class="order-item">
         <img src={orderImage2} alt="Order 2" className="order-image" />
           <div class="order-details">
-                  <h3 class="trip-title">Nortern Arizona Trip</h3>
+                  <h3 class="trip-title">Northern Arizona Trip</h3>
               </div>
               <div class="order-total">
               <p>Total: $350</p>
