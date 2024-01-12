@@ -32,16 +32,24 @@ const OrderStatus = () => {
       {orderStatus && <div className="status-display">{orderStatus}</div>}
 
       <div className="orders-display">
-        <div className="order-item">
-          <img src={orderImage1} alt="Order 1" className="order-image" />
-          <h3>Utah Trip</h3>
-          <p>Total: $700</p>
+      <div class="order-item">
+      <img src={orderImage1} alt="Order 1" className="order-image" />
+        <div class="order-details">
+                <h3 class="trip-title">Utah Trip</h3>
+            </div>
+            <div class="order-total">
+            <p>Total: $650</p>
+            </div>
         </div>
-        <div className="order-item">
-          <img src={orderImage2} alt="Order 2" className="order-image" />
-          <h3>Northern Arizona Trip</h3>
-          <p>Total: $350</p>
-        </div>
+        <div class="order-item">
+        <img src={orderImage2} alt="Order 2" className="order-image" />
+          <div class="order-details">
+                  <h3 class="trip-title">Nortern Arizona Trip</h3>
+              </div>
+              <div class="order-total">
+              <p>Total: $350</p>
+              </div>
+          </div>
       </div>
     </div>
   );

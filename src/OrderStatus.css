@@ -47,15 +47,22 @@
     border-radius: 10px;
     padding: 15px;
     margin-bottom: 20px;
-    text-align: center;
-  }
+    display: flex;
+    justify-content: space-between; /* Aligns children side by side */
+    align-items: center; /* Vertically centers children */
+}
   
   .order-image {
-    max-width: 100%; /* Ensure image is responsive and fits within its container */
+    max-width: 200px; /* Ensure image is responsive and fits within its container */
     height: auto; /* Maintain aspect ratio */
     max-height: 190px; /* Limit the image height */
     border: 1px solid #ddd;
     border-radius: 10px;
+  }
+
+  .order-item .city-title {
+    margin-bottom: 5px; /* Reduced margin or adjust as needed */
+    /* Additional styling to move the title up */
   }
 
   /* Responsive design for smaller screens */
