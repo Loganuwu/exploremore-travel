@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/exploremore-travel/static/css/main.ec4d92b5.css",
-    "main.js": "/exploremore-travel/static/js/main.b6b88c5d.js",
+    "main.css": "/exploremore-travel/static/css/main.40186a82.css",
+    "main.js": "/exploremore-travel/static/js/main.12e2a71a.js",
     "static/js/787.2eb94407.chunk.js": "/exploremore-travel/static/js/787.2eb94407.chunk.js",
     "static/media/paris.webp": "/exploremore-travel/static/media/paris.d4e40ce652df4bac8eeb.webp",
     "static/media/itinerary.png": "/exploremore-travel/static/media/itinerary.3ee61459642d7e618c5c.png",
@@ -18,12 +18,12 @@
     "static/media/shoppingcart.svg": "/exploremore-travel/static/media/shoppingcart.09d1d9e27cd62c68bf401bc8cb9fc3b2.svg",
     "index.html": "/exploremore-travel/index.html",
     "static/media/trashcan.svg": "/exploremore-travel/static/media/trashcan.a4d452793f9cabb4d420cdee7d029b85.svg",
-    "main.ec4d92b5.css.map": "/exploremore-travel/static/css/main.ec4d92b5.css.map",
-    "main.b6b88c5d.js.map": "/exploremore-travel/static/js/main.b6b88c5d.js.map",
+    "main.40186a82.css.map": "/exploremore-travel/static/css/main.40186a82.css.map",
+    "main.12e2a71a.js.map": "/exploremore-travel/static/js/main.12e2a71a.js.map",
     "787.2eb94407.chunk.js.map": "/exploremore-travel/static/js/787.2eb94407.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.ec4d92b5.css",
-    "static/js/main.b6b88c5d.js"
+    "static/css/main.40186a82.css",
+    "static/js/main.12e2a71a.js"
   ]
 }
