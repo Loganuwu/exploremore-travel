@@ -73,7 +73,7 @@ const ShoppingCart = () => {
           ))}
           <div className="cart-summary">
             <div className="cart-total">
-              <h2>Total: ${totalPrice}</h2>
+              <h2>Subtotal: ${totalPrice}</h2>
             </div>
             <button className="checkout-button" onClick={handleCheckout}>Checkout</button>
           </div>

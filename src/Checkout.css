@@ -1,28 +1,111 @@
 .checkout-container {
-    /* Styles for your checkout container */
+    background: white;
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* This will center the container vertically */
+    min-height: 40vh; /* Use a minimum height for full screen height */
   }
   
-  form {
-    /* Styles for your form */
+  .checkout-header {
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding-bottom: 20px;
+  }
+
+  .shipping-form .form-row:first-child {
+    margin-top: 20px; /* Add more space at the top of the first row */
   }
   
-  label {
-    display: block;
-    margin: 10px 0;
+  .step {
+    display: flex;
+    align-items: center;
+    margin-right: 20px; /* Space between steps */
   }
   
-  input {
-    margin: 5px 0;
-    padding: 8px;
-    width: calc(100% - 16px); /* Adjust input width */
+  .step-number {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    border: 2px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
   }
   
-  button {
-    padding: 10px 15px;
-    background-color: #007bff;
+  .step-title {
+    font-weight: bold;
+    margin-left: 10px;
+  }
+  
+  /* Add styling for steps line */
+  .step:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    left: calc(50% + 20px); /* Adjust based on your layout */
+    bottom: 15px; /* Position the line below the numbers */
+    width: calc(100% - 60px); /* Line width - adjust based on your layout */
+    height: 2px;
+    background-color: #000;
+    z-index: -1;
+  }
+  
+  .form-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+  
+  .form-row input {
+    padding: 10px;
+    margin-right: 5px;
+    flex: 1; /* Inputs take up equal space */
+  }
+
+  .form-row input[type="password"] {
+    font-family: 'Courier New', monospace; /* Ensures dots are evenly spaced in password field */
+  }
+
+  .form-row:last-child input {
+    margin-right: 0;
+  }
+  
+  .next-button {
+    background: black;
     color: white;
+    padding: 10px 20px;
     border: none;
     cursor: pointer;
-    margin-top: 20px;
+  }
+
+  .next-button, .submit-button {
+    background-color: #000; /* Black background */
+    color: #fff; /* White text */
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-top: 20px; /* Space above the button */
+    width: 100%; /* Full width button */
+  }
+  
+  /* Responsive adjustments ----------------------------------------------------------------- */
+  @media (max-width: 768px) {
+    .form-row {
+      flex-direction: column;
+    }
+  
+    .form-row input {
+      margin-right: 0;
+      margin-bottom: 10px; /* Space between inputs when stacked */
+    }
+  
+    .step:not(:last-child)::after {
+      content: none; /* Remove line connecting steps on smaller screens */
+    }
   }
   
